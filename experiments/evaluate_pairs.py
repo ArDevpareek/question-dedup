@@ -1,6 +1,10 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 import json
 import re
-import sys
 import time
 import hashlib
 from normalize import make_hash
@@ -8,8 +12,12 @@ from embed import embed
 from judge import judge, JUDGE_PROMPT
 from llm import MODEL
 
-PAIRS_FILE = sys.argv[1] if len(sys.argv) > 1 else "test_pairs.json"
-CACHE_FILE = "judge_cache.json"
+def find_file(name):
+    path = Path(name)
+    return path if path.exists() else ROOT / name
+
+PAIRS_FILE = find_file(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data" / "test_pairs.json"
+CACHE_FILE = Path(__file__).resolve().parent / "judge_caches" / "judge_cache.json"
 SLEEP_BETWEEN_CALLS = 5
 
 
@@ -124,14 +132,14 @@ def main():
         scores = [p["score"] for p in group]
         print(f"{cat:<30} ({group[0]['label']:<9}) scores {min(scores):.2f} to {max(scores):.2f}")
 
-    print("\n=== 2. Each layer on its own (all 60 pairs) ===")
+    print(f"\n=== 2. Each layer on its own (all {len(pairs)} pairs) ===")
     for t in [0.60, 0.70, 0.80, 0.90]:
         show(f"embedding only, line at {t:.2f}", measure(pairs, t, t))
     show("judge only (no embedding lines)", measure(pairs, 9.0, -9.0))
     show(f"cascade now {CURRENT}", measure(pairs, *CURRENT))
     show(f"final {FINAL}", measure(pairs, *FINAL))
 
-    print("\n=== 3. Tuning on the TUNE half (30 pairs) ===")
+    print(f"\n=== 3. Tuning on the TUNE half ({len(tune)} pairs) ===")
     results = []
     for dup_t in DUP_OPTIONS:
         for new_t in NEW_OPTIONS:
@@ -144,12 +152,12 @@ def main():
     chosen = (best[0], best[1])
     print(f"\nChosen: {chosen} (precision >= 0.90, then highest recall, then fewest judge calls)")
 
-    print("\n=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===")
+    print(f"\n=== 4. Fair check on the TEST half ({len(test)} pairs, not used for tuning) ===")
     show(f"cascade now {CURRENT}", measure(test, *CURRENT))
     show(f"cascade chosen {chosen}", measure(test, *chosen))
     show(f"final {FINAL}", measure(test, *FINAL))
 
-    print(f"\n=== 5. Mistakes with the chosen setting {chosen} (all 60 pairs) ===")
+    print(f"\n=== 5. Mistakes with the chosen setting {chosen} (all {len(pairs)} pairs) ===")
     for p, pred in measure(pairs, *chosen)["mistakes"]:
         print(f"{p['id']:<4} {p['category']:<30} expected {p['label']:<9} got {pred:<9} "
               f"score {p['score']:.2f}  judge: {p['judge']}")

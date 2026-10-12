@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+import argparse
 import time
 import numpy as np
 from clusters import ClusteredIndex
@@ -17,14 +23,20 @@ def make_fake_bank(n, dim, n_topics=500, noise=0.7, spread=0.6, seed=0):
     bank /= np.linalg.norm(bank, axis=1, keepdims=True)
     return bank.astype(np.float32)
 
+parser = argparse.ArgumentParser()
+parser.add_argument("--query-noise", type=float, default=0.9, help="noise added to a bank question to make a query")
+parser.add_argument("--spread", type=float, default=0.6, help="how far apart the fake topics are")
+args = parser.parse_args()
+print(f"Settings: query noise {args.query_noise}, spread {args.spread}")
+
 rng = np.random.default_rng(1)
-bank = make_fake_bank(N, DIM)
+bank = make_fake_bank(N, DIM, spread=args.spread)
 pairs = rng.integers(0, N, size=(2000, 2))
 avg_sim = np.mean(np.sum(bank[pairs[:, 0]] * bank[pairs[:, 1]], axis=1))
 print(f"Average similarity between two random fake questions: {avg_sim:.2f}")
 
 rows = rng.choice(N, size=N_QUERIES, replace=False)
-queries = bank[rows] + 0.9 * rng.standard_normal((N_QUERIES, DIM)) / np.sqrt(DIM)
+queries = bank[rows] + args.query_noise * rng.standard_normal((N_QUERIES, DIM)) / np.sqrt(DIM)
 queries /= np.linalg.norm(queries, axis=1, keepdims=True)
 queries = queries.astype(np.float32)
 

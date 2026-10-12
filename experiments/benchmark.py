@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 import time
 import numpy as np
 from embed import embed

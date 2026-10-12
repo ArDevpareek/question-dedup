@@ -1,0 +1,68 @@
+=== Verify after cleanup (2026-10-12 18:12) ===
+
+--- 1. python -m py_compile on every .py file
+OK   backfill.py
+OK   build_clusters.py
+OK   clusters.py
+OK   detector.py
+OK   embed.py
+OK   generator.py
+OK   judge.py
+OK   llm.py
+OK   load_seed.py
+OK   normalize.py
+OK   run_generate.py
+OK   store.py
+OK   experiments/benchmark.py
+OK   experiments/benchmark_clusters.py
+OK   experiments/check_exact.py
+OK   experiments/evaluate_combined.py
+OK   experiments/evaluate_cross_encoder.py
+OK   experiments/evaluate_detector.py
+OK   experiments/evaluate_pairs.py
+OK   experiments/heldout_final.py
+OK   experiments/list_mistakes.py
+OK   experiments/make_public_pairs.py
+OK   experiments/score_table.py
+OK   experiments/test_switch.py
+py_compile result: PASS
+
+--- 2. experiments/check_exact.py (no API), compared with results/exact_check.txt
+check_exact: PASS (output identical)
+
+--- 3. experiments/score_table.py (no API), compared with results/score_table_seed10.txt
+score_table: PASS (output identical)
+
+--- 4. Started from another folder (experiments/), check_exact.py must give the same output
+check_exact from experiments/: PASS
+
+--- 5. Cache-only checks (GEMINI_API_KEY removed for these runs, so no API call is possible)
+data/test_pairs.json -> Judge: 0 pairs still need a verdict
+   PASS
+   final setting line: final (1.01, 0.5)                  precision 1.00 | recall 0.97 | missed dups  1 | false alarms  0 | review  0 | judge calls 53
+data/fresh_pairs.json -> Judge: 0 pairs still need a verdict
+   PASS
+   final setting line: final (1.01, 0.5)                  precision 1.00 | recall 0.93 | missed dups  1 | false alarms  0 | review  0 | judge calls 24
+
+--- 6. experiments/evaluate_detector.py (regression test, a few judge calls)
+  Q1 | got: new                | expected: new                | best:   -  [] | by: empty store | OK
+  Q2 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.94 ['Q1'] | by: judge       | OK
+         reason: The new question asks for a definition using different words, which requires the same knowledge and answer.
+  Q3 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.90 ['Q1'] | by: judge       | OK
+         reason: It asks the same question using different words.
+  Q4 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.93 ['Q1'] | by: judge       | OK
+         reason: It asks the same definition in different words.
+  Q5 | got: new                | expected: new                | best: 0.80 [] | by: judge       | OK
+         reason: The new question asks for specific laws of reflection, whereas the existing questions ask for a general definition or meaning.
+  Q6 | got: new                | expected: new                | best: 0.71 [] | by: judge       | OK
+         reason: It asks about a specific measurable angle rather than a general definition or the laws of reflection.
+  Q7 | got: review             | expected: new                | best: 0.85 ['Q6'] | by: numbers guard | WRONG
+         reason: Only one question has numbers. This is the same question about the angle of reflection with a specific number added.
+  Q8 | got: review             | expected: review             | best: 0.86 ['Q1'] | by: judge       | OK
+         reason: The term 'reflection' is too vague without context, as it could refer to light, sound, or a psychological concept.
+  Q9 | got: new                | expected: new                | best: 0.66 [] | by: judge       | OK
+         reason: The new question asks for a comparison of two specific types of reflection rather than a general definition.
+ Q10 | got: exact_duplicate    | expected: exact_duplicate    | best: 1.00 ['Q2'] | by: exact       | OK
+
+Correct: 9/10   Wrong: 1   LLM judge calls: 8
+evaluate_detector exit code: 0 -> PASS

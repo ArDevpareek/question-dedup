@@ -1,9 +1,14 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 import json
 from detector import DuplicateDetector
 
-with open("seed_questions.json", encoding="utf-8") as f:
+with open(ROOT / "data" / "seed_questions.json", encoding="utf-8") as f:
     questions = json.load(f)
-with open("test_labels.json", encoding="utf-8") as f:
+with open(ROOT / "data" / "test_labels.json", encoding="utf-8") as f:
     expected = json.load(f)
 
 detector = DuplicateDetector()

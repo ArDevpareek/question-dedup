@@ -1,10 +1,15 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 import json
 from sentence_transformers import CrossEncoder
 from normalize import make_hash
 from embed import embed
 
-PAIRS_FILE = "test_pairs.json"
-CACHE_FILE = "judge_cache.json"
+PAIRS_FILE = ROOT / "data" / "test_pairs.json"
+CACHE_FILE = Path(__file__).resolve().parent / "judge_caches" / "judge_cache.json"
 CE_MODEL = "cross-encoder/quora-distilroberta-base"
 
 D2_LINE = 0.5
@@ -86,7 +91,7 @@ def main():
     with open(CACHE_FILE, encoding="utf-8") as f:
         cache = json.load(f)
     verdicts = cache["verdicts"]
-    print(f"Judge verdicts from {CACHE_FILE} (cache version {cache.get('version')}, {len(verdicts)} verdicts)")
+    print(f"Judge verdicts from {CACHE_FILE.name} (cache version {cache.get('version')}, {len(verdicts)} verdicts)")
 
     add_scores(pairs, verdicts)
     missing = [p["id"] for p in pairs if p["judge"] == "error"]

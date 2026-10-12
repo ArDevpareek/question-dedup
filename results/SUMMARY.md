@@ -17,6 +17,10 @@ Three judge rule sets appear in this folder:
 | new + calc rule (current `judge.py`) | `judge_cache.json` (backup: `judge_cache_v3.json`) | `0c86fbfe3100` |
 | new + calc rule, with `gemini-3.8-flash` (18 PAWS verdicts only) | `judge_cache_v4_flash38.json` | `789a578c174a` |
 
+**Fourth update (version 1 frozen):** section 10 adds the held-out test on fresh pairs, and section 11 lists
+what changed when version 1 was frozen. Since then, the scripts named below live in `experiments/`, the data
+files in `data/`, and every `judge_cache*.json` file in `experiments/judge_caches/`.
+
 **Third update:** section 9 adds retry handling, a regression re-check, the public data
 re-run with the current rules, and a clean demo database. After section 9, `judge_cache.json`
 holds 155 verdicts (56 test + 99 public), and the `questions.db` with 43 questions is now `questions_dev_43.db`.
@@ -618,3 +622,82 @@ So the gain in section 8 comes from the model, not from the rules. It is still o
 While checking that the edited files load, I imported `evaluate_detector.py` by mistake.
 Its code runs on import, so it started the regression test and may have made a few judge calls before it stopped.
 Nothing was saved, and no file or cache changed. It only used a little of the per-minute quota.
+
+## 10. Held-out test (fresh pairs)
+
+### What was tested
+
+`fresh_pairs.json` has 26 new pairs: 14 duplicate and 12 different. They are on chapters
+the rules were never tuned on: refraction, lenses, the human eye and electricity.
+
+**Be honest about where these pairs come from.** They were written by the AI assistant that
+helped design the system. They were written before the run, and the labels were not changed
+after it. But the writer knew the rules, so this is not the same as pairs from an independent person.
+
+The test was run **once**. No rule, line (threshold) or prompt was changed after seeing the result.
+The run made 26 judge calls with no errors and no retries (`fresh_heldout.txt`).
+The tune/test split printed in `fresh_heldout.txt` has no meaning here: the whole file is a test set.
+The numbers below come from `fresh_heldout_final.txt`, which reads the saved verdicts and makes no LLM calls.
+
+### Results on all 26 pairs
+
+| Approach | Precision | Recall | Missed | False alarms | Review | Judge calls | Source |
+|---|---|---|---|---|---|---|---|
+| Final design (1.01, 0.50), guard on | 1.00 | 0.93 | 1 | 0 | 0 | 24 | `fresh_heldout_final.txt`, section 1 |
+| Judge only | 1.00 | 1.00 | 0 | 0 | 0 | 26 | `fresh_heldout_final.txt`, section 1 |
+| Old cascade (0.92, 0.75) | 0.80 | 0.57 | 6 | 2 | 0 | 10 | `fresh_heldout.txt`, section 2 |
+| Embedding only, line 0.80 | 0.58 | 0.50 | 7 | 5 | 0 | 0 | `fresh_heldout.txt`, section 2 |
+| Cross-encoder alone, line 0.5 | 0.50 | 0.21 | 11 | 3 | - | 0 | `fresh_heldout_cross_encoder.txt` |
+
+- **The final design's only mistake is F5**: "What is myopia?" vs "Explain short-sightedness."
+  The embedding score is 0.44, below the 0.50 line, so the pair is called "new" before the judge sees it.
+  The judge itself said "duplicate" for this pair. This is the same kind of mistake as C4 in the 60 pairs:
+  a paraphrase that needs world knowledge (myopia = short-sightedness), so the words do not overlap.
+- **The judge got all 26 pairs right**, including the two opposite-case traps F15 and F16
+  (embedding scores 0.99 to 1.00) and the four near-miss pairs.
+- **The numbers guard never fired** (review 0). Both definition-versus-calculation pairs were already
+  called "different" (F17 by the judge, F18 by the embedding line).
+- **The cross-encoder did badly here** (recall 0.21). It scored all 3 number-changed pairs 0.00 to 0.02 and the
+  2 low-overlap paraphrases 0.00, and it called both opposite-case traps duplicates (0.97, 0.98).
+
+### How to read this
+
+- 26 pairs is a small set. One pair moves recall by about 0.07 (1 of 14 duplicates; computed).
+- The result agrees with the 60-pair test: the judge is accurate, and the 0.50 line costs one
+  low-overlap paraphrase while saving 2 of 26 judge calls (computed: 26 − 24).
+
+## 11. Version 1 frozen
+
+Version 1 is saved as the git tag **`v1-two-gate`**
+("Version 1: exact check + embedding search + LLM judge + numbers guard").
+The full write-up is `REPORT.md` in the project folder; a one-page overview is `README.md`.
+
+### What changed in this session
+
+- **Git.** The folder became a git repository (branch `main`). A first commit, "Snapshot before final cleanup",
+  saves everything as it was before this session's changes.
+- **Step 1 (final checks)** was already done in the earlier session (section 9). Nothing was redone.
+- **Held-out test** on 26 fresh pairs, run once (section 10). New files: `fresh_heldout.txt`,
+  `fresh_heldout_cross_encoder.txt`, `fresh_heldout_final.txt`. Before the run, the judge cache was copied to
+  `judge_cache_v3_before_fresh.json`. After it, `judge_cache.json` holds 181 verdicts (155 + 26 fresh);
+  all 56 test-pair verdicts are unchanged.
+- **Evidence that was only seen in chat, now saved** (no rule changes):
+  - `score_table_seed10.txt`, `exact_check.txt` (no API calls)
+  - `benchmark_run1.txt` to `benchmark_run3.txt`: embedding 4.2 to 4.8 ms per question; search in 100,000
+    questions 23.57 to 25.82 ms
+  - `benchmark_clusters_spread06.txt` (average random similarity 0.49) and `benchmark_clusters_spread04.txt` (0.58).
+    At nprobe 5 the clustered search found the true closest match 200/200 and 192/200 times. In this numpy code it
+    was not faster than brute force at nprobe 5 (9.42 ms vs 8.99 ms with spread 0.6); it was faster at nprobe 1 and 2.
+  - `test_switch.txt`: brute force and clustered search gave the same labels on 4 candidates.
+- **Folder clean-up.** Data in `data/`, evaluation scripts in `experiments/`, judge caches in
+  `experiments/judge_caches/`. Paths are built from each file's own location. All checks passed afterwards
+  (`verify_after_cleanup.txt`): every file compiles, `check_exact.py` and `score_table.py` give identical output,
+  both pair files need 0 new judge calls, and the regression test gives 9/10 with 8 judge calls.
+- **Configurable database path** (`store.set_db_path`) and a **tag filter** (`store.get_questions_by_tags`).
+  The detector and judge never read tags.
+- **`demo.py`** (`demo_output.txt`): on its own `demo.db`, 10 of 10 detector cases matched the expected label
+  (2 exact duplicates, 3 semantic duplicates, 3 different, 2 tricky cases). The generation part accepted 3 of 3
+  candidates. `questions.db` was not changed.
+- **Small label fixes:** `evaluate_pairs.py` headings now show the real pair counts, and three experiment scripts
+  print file names instead of full paths. Listed in `REPORT.md`, appendix.
+- **No rule changed:** no threshold, judge prompt, detection or generation logic, or test label.

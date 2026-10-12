@@ -1,0 +1,167 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+======================================================================
+Setup - a throwaway demo database
+======================================================================
+Using database: demo.db (questions.db is not touched)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1675.41it/s]
+Loaded 10 seed questions, embedded 10
+Built 3 clusters from 10 questions
+
+Cluster 0 (1 questions)
+   Q6: What is the angle of reflection?
+
+Cluster 1 (8 questions)
+   Q1: What is reflection of light?
+   Q2: Define the reflection of light.
+   Q3: What do you understand by the reflection of light?
+   Q4: Explain the meaning of light reflection.
+   Q5: State the laws of reflection of light.
+   ... and 3 more
+
+Cluster 2 (1 questions)
+   Q7: The angle of incidence is 30°. What is the angle of reflection?
+
+
+======================================================================
+Part A - Tags organise and filter questions
+======================================================================
+Tags of all questions:
+   Q1   {"subject": "physics", "chapter": "light"}                     What is reflection of light?
+   Q2   {"subject": "physics", "chapter": "light"}                     Define the reflection of light.
+   Q3   {"subject": "physics", "chapter": "light"}                     What do you understand by the reflection of light?
+   Q4   {"subject": "physics", "chapter": "light"}                     Explain the meaning of light reflection.
+   Q5   {"subject": "physics", "chapter": "light"}                     State the laws of reflection of light.
+   Q6   {"subject": "physics", "chapter": "light"}                     What is the angle of reflection?
+   Q7   {"subject": "physics", "chapter": "light", "type": "numerical"} The angle of incidence is 30°. What is the angle of reflection?
+   Q8   {"subject": "physics"}                                         What is reflection?
+   Q9   {"subject": "physics", "chapter": "light"}                     What is the difference between regular and diffuse reflection?
+   Q10  {"subject": "physics", "chapter": "light"}                     Define the reflection of light.
+   (Q7 has an extra key 'type'. Q8 has no 'chapter'. No table change was needed for either.)
+
+Filter {"chapter": "light"}: 9 questions -> Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q9, Q10
+
+Filter {"type": "numerical"}: 1 questions -> Q7
+   (Q8 is missing from the 'chapter' filter because it has no chapter tag.)
+
+Added Q11 'What is a plane mirror?' with tags {"subject": "physics", "chapter": "light", "difficulty": "easy"}
+   'difficulty' is a brand-new key. Tags are stored as JSON, so the table did not change.
+Filter {"difficulty": "easy"}: 1 question -> Q11 (What is a plane mirror?)
+
+======================================================================
+Part B - The independent detector (detector.check only, nothing is added)
+======================================================================
+Loaded 11 questions and 3 clusters in 0.04s (newly embedded: 1)
+
+1. 'DEFINE THE REFLECTION OF LIGHT!!'
+   expected type : Exact duplicate (exact_duplicate)
+   result        : exact_duplicate
+   decided by    : exact
+   best score    : 1.00
+   matched       : Q2 - Define the reflection of light.
+   matched       : Q10 - Define the reflection of light.
+
+2. '  what is   reflection of light '
+   expected type : Exact duplicate (exact_duplicate)
+   result        : exact_duplicate
+   decided by    : exact
+   best score    : 1.00
+   matched       : Q1 - What is reflection of light?
+
+3. 'Explain what is meant by the reflection of light.'
+   expected type : Semantic duplicate (semantic_duplicate)
+   result        : semantic_duplicate
+   decided by    : judge
+   best score    : 0.96
+   matched       : Q4 - Explain the meaning of light reflection.
+   judge reason  : It asks the same definition in different words.
+
+4. 'What do we call the bouncing back of light from a surface?'
+   expected type : Semantic duplicate (semantic_duplicate)
+   result        : semantic_duplicate
+   decided by    : judge
+   best score    : 0.59
+   matched       : Q1 - What is reflection of light?
+   judge reason  : It asks for the definition of light reflection in different words.
+
+5. 'A ray of light strikes a plane mirror with an angle of incidence of 45°. Find the angle of reflection.'
+   expected type : Semantic duplicate (semantic_duplicate)
+   result        : semantic_duplicate
+   decided by    : judge
+   best score    : 0.70
+   matched       : Q7 - The angle of incidence is 30°. What is the angle of reflection?
+   judge reason  : It is the same calculation question where only the numbers and context words are changed.
+
+6. 'Why does a plane mirror form a laterally inverted image?'
+   expected type : Different (new)
+   result        : new
+   decided by    : judge
+   best score    : 0.73
+   matched       : none (closest was Q11 - What is a plane mirror?)
+   judge reason  : It asks about lateral inversion rather than a basic definition of a plane mirror.
+
+7. 'Why are many images formed when two plane mirrors are placed parallel to each other?'
+   expected type : Different (new)
+   result        : new
+   decided by    : judge
+   best score    : 0.69
+   matched       : none (closest was Q11 - What is a plane mirror?)
+   judge reason  : It asks about multiple image formation in parallel mirrors rather than defining a single plane mirror.
+
+8. 'What is the difference between a real image and a virtual image?'
+   expected type : Different (new)
+   result        : new
+   decided by    : embedding
+   best score    : 0.26
+   matched       : none (closest was Q8 - What is reflection?)
+
+9. 'What is the angle of incidence?'
+   expected type : Tricky: near-miss of Q6 (new)
+   result        : new
+   decided by    : judge
+   best score    : 0.77
+   matched       : none (closest was Q7 - The angle of incidence is 30°. What is the angle of reflection?)
+   judge reason  : It asks about the angle of incidence instead of the angle of reflection or laws of reflection.
+
+10. 'What is reflection of light?'
+   expected type : Tricky: Q1 with other tags (exact_duplicate)
+   submitted with tags {"subject": "science", "chapter": "optics"}, but detector.check() receives only the text
+   result        : exact_duplicate
+   decided by    : exact
+   best score    : 1.00
+   matched       : Q1 - What is reflection of light?
+
+Summary
+   #   case                         expected             got                  decided by     match
+   1   Exact duplicate              exact_duplicate      exact_duplicate      exact          yes
+   2   Exact duplicate              exact_duplicate      exact_duplicate      exact          yes
+   3   Semantic duplicate           semantic_duplicate   semantic_duplicate   judge          yes
+   4   Semantic duplicate           semantic_duplicate   semantic_duplicate   judge          yes
+   5   Semantic duplicate           semantic_duplicate   semantic_duplicate   judge          yes
+   6   Different                    new                  new                  judge          yes
+   7   Different                    new                  new                  judge          yes
+   8   Different                    new                  new                  embedding      yes
+   9   Tricky: near-miss of Q6      new                  new                  judge          yes
+   10  Tricky: Q1 with other tags   exact_duplicate      exact_duplicate      exact          yes
+
+Matched: 10/10
+
+======================================================================
+Part C - Generation with duplicate avoidance (topic 'reflection of light', 3 questions)
+======================================================================
+Loaded 11 questions and 3 clusters in 0.00s (newly embedded: 0)
+
+--- Round 1: sent 7 existing + 0 rejected, asked for 6, got 6 ---
+  Context sent to the LLM:
+     - Define the reflection of light.
+     - What is the angle of reflection?
+     - The angle of incidence is 30°. What is the angle of reflection?
+     - State the laws of reflection of light.
+     - What is reflection?
+     - What is the difference between regular and diffuse reflection?
+     - What is a plane mirror?
+  ACCEPT Q12 [lateral inversion] (cluster 0, by embedding): Explain why the word 'AMBULANCE' is painted laterally inverted on the front of emergency vehicles.
+  ACCEPT Q13 [multiple reflection calculation] (cluster 0, by judge): Calculate the total number of images formed when an object is placed between two plane mirrors that are inclined at an angle of 60° to each other.
+  ACCEPT Q14 [periscope application] (cluster 1, by judge): Describe how two plane mirrors are arranged inside a periscope to allow a person to see over an obstacle.
+
+Accepted: 3   Rejected: 0   Review: 0   Checked: 3

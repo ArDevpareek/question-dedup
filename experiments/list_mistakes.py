@@ -1,26 +1,32 @@
+import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 import json
 from collections import defaultdict
 import evaluate_pairs as ep
 from evaluate_combined import add_scores, measure, show, d1, d2, make_d3
 
+CACHE_DIR = Path(__file__).resolve().parent / "judge_caches"
 RULE_CACHES = {
-    "old": "judge_cache_v1.json",
-    "new": "judge_cache_v2.json",
-    "calc": "judge_cache.json",
+    "old": CACHE_DIR / "judge_cache_v1.json",
+    "new": CACHE_DIR / "judge_cache_v2.json",
+    "calc": CACHE_DIR / "judge_cache.json",
 }
 RULE_NAMES = {"old": "old rules", "new": "new rules", "calc": "new + calc rule"}
 
 def load_verdicts(path):
     with open(path, encoding="utf-8") as f:
         cache = json.load(f)
-    print(f"{path}: cache version {cache['version']}, {len(cache['verdicts'])} verdicts")
+    print(f"{path.name}: cache version {cache['version']}, {len(cache['verdicts'])} verdicts")
     return cache["verdicts"]
 
 def cascade(dup_t, new_t):
     return lambda p: ep.decide(p, dup_t, new_t)
 
 def main():
-    with open("test_pairs.json", encoding="utf-8") as f:
+    with open(ROOT / "data" / "test_pairs.json", encoding="utf-8") as f:
         pairs = json.load(f)
     verdicts = {rules: load_verdicts(path) for rules, path in RULE_CACHES.items()}
     add_scores(pairs, verdicts["old"])

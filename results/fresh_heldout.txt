@@ -1,0 +1,95 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1122.76it/s]
+Judge: 26 pairs still need a verdict
+   1/26 F1: duplicate
+   2/26 F2: duplicate
+   3/26 F3: duplicate
+   4/26 F4: duplicate
+   5/26 F5: duplicate
+   6/26 F6: duplicate
+   7/26 F7: duplicate
+   8/26 F8: duplicate
+   9/26 F9: duplicate
+   10/26 F10: duplicate
+   11/26 F11: duplicate
+   12/26 F12: duplicate
+   13/26 F13: duplicate
+   14/26 F14: duplicate
+   15/26 F15: different
+   16/26 F16: different
+   17/26 F17: different
+   18/26 F18: different
+   19/26 F19: different
+   20/26 F20: different
+   21/26 F21: different
+   22/26 F22: different
+   23/26 F23: different
+   24/26 F24: different
+   25/26 F25: different
+   26/26 F26: different
+Numbers guard: ON
+
+=== 1. Embedding scores by category ===
+paraphrase                     (duplicate) scores 0.62 to 0.93
+low_overlap_paraphrase         (duplicate) scores 0.44 to 0.72
+numbers_changed                (duplicate) scores 0.62 to 0.83
+unit_change                    (duplicate) scores 0.88 to 0.88
+word_order_same_meaning        (duplicate) scores 0.89 to 0.89
+extra_part                     (duplicate) scores 0.86 to 0.89
+opposite_case                  (different) scores 0.99 to 1.00
+definition_vs_calculation      (different) scores 0.37 to 0.70
+near_miss_wording              (different) scores 0.71 to 0.85
+same_topic_different_concept   (different) scores 0.52 to 0.64
+
+=== 2. Each layer on its own (all 26 pairs) ===
+embedding only, line at 0.60       precision 0.62 | recall 0.93 | missed dups  1 | false alarms  8 | review  0 | judge calls  0
+embedding only, line at 0.70       precision 0.62 | recall 0.71 | missed dups  4 | false alarms  6 | review  0 | judge calls  0
+embedding only, line at 0.80       precision 0.58 | recall 0.50 | missed dups  7 | false alarms  5 | review  0 | judge calls  0
+embedding only, line at 0.90       precision 0.33 | recall 0.07 | missed dups 13 | false alarms  2 | review  0 | judge calls  0
+judge only (no embedding lines)    precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 26
+cascade now (0.92, 0.75)           precision 0.80 | recall 0.57 | missed dups  6 | false alarms  2 | review  0 | judge calls 10
+final (1.01, 0.5)                  precision 1.00 | recall 0.93 | missed dups  1 | false alarms  0 | review  0 | judge calls 24
+
+=== 3. Tuning on the TUNE half (13 pairs) ===
+cascade (0.92, 0.30)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 11
+cascade (0.92, 0.40)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 11
+cascade (0.92, 0.50)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls 10
+cascade (0.92, 0.60)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls  9
+cascade (0.92, 0.70)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  5
+cascade (0.92, 0.75)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  4
+cascade (0.95, 0.30)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 12
+cascade (0.95, 0.40)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 12
+cascade (0.95, 0.50)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls 11
+cascade (0.95, 0.60)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls 10
+cascade (0.95, 0.70)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  6
+cascade (0.95, 0.75)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  5
+cascade (0.98, 0.30)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 12
+cascade (0.98, 0.40)               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 12
+cascade (0.98, 0.50)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls 11
+cascade (0.98, 0.60)               precision 0.86 | recall 0.86 | missed dups  1 | false alarms  1 | review  0 | judge calls 10
+cascade (0.98, 0.70)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  6
+cascade (0.98, 0.75)               precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  5
+cascade (1.01, 0.30)               precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 13
+cascade (1.01, 0.40)               precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 13
+cascade (1.01, 0.50)               precision 1.00 | recall 0.86 | missed dups  1 | false alarms  0 | review  0 | judge calls 12
+cascade (1.01, 0.60)               precision 1.00 | recall 0.86 | missed dups  1 | false alarms  0 | review  0 | judge calls 11
+cascade (1.01, 0.70)               precision 1.00 | recall 0.57 | missed dups  3 | false alarms  0 | review  0 | judge calls  7
+cascade (1.01, 0.75)               precision 1.00 | recall 0.57 | missed dups  3 | false alarms  0 | review  0 | judge calls  6
+
+Chosen: (1.01, 0.3) (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 4. Fair check on the TEST half (13 pairs, not used for tuning) ===
+cascade now (0.92, 0.75)           precision 0.80 | recall 0.57 | missed dups  3 | false alarms  1 | review  0 | judge calls  6
+cascade chosen (1.01, 0.3)         precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 13
+final (1.01, 0.5)                  precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 12
+
+=== 5. Mistakes with the chosen setting (1.01, 0.3) (all 26 pairs) ===
+
+=== 6. Final setting (1.01, 0.5), numbers guard on vs off ===
+all pairs, guard ON                precision 1.00 | recall 0.93 | missed dups  1 | false alarms  0 | review  0 | judge calls 24
+all pairs, guard OFF               precision 1.00 | recall 0.93 | missed dups  1 | false alarms  0 | review  0 | judge calls 24
+TEST half, guard ON                precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 12
+TEST half, guard OFF               precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 12
+
+=== 7. Mistakes and reviews with the final setting (1.01, 0.5) (all pairs, guard ON) ===
+F5   low_overlap_paraphrase         expected duplicate got different score 0.44  judge: duplicate  (MISTAKE)

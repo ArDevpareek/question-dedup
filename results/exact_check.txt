@@ -1,0 +1,24 @@
+'Define the reflection of light.'
+   cleaned : define the reflection of light
+   matches : ['Q2', 'Q10']
+'DEFINE the reflection of light!!'
+   cleaned : define the reflection of light
+   matches : ['Q2', 'Q10']
+'   define   the   reflection of light '
+   cleaned : define the reflection of light
+   matches : ['Q2', 'Q10']
+'What is the angle of reflection'
+   cleaned : what is the angle of reflection
+   matches : ['Q6']
+'Define the refraction of light.'
+   cleaned : define the refraction of light
+   matches : none
+'The angle of incidence is 45°. What is the angle of reflection?'
+   cleaned : the angle of incidence is 45 what is the angle of reflection
+   matches : none
+'Define reflection of light.'
+   cleaned : define reflection of light
+   matches : none
+
+Duplicates already inside the store:
+   Q2,Q10  (2 copies)

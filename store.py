@@ -1,9 +1,16 @@
 import sqlite3
 import json
 import numpy as np
+from pathlib import Path
 from normalize import normalize_text, make_hash
 
-DB_PATH = "questions.db"
+PROJECT_DIR = Path(__file__).resolve().parent
+DB_PATH = PROJECT_DIR / "questions.db"
+
+def set_db_path(path):
+    global DB_PATH
+    path = Path(path)
+    DB_PATH = path if path.is_absolute() else PROJECT_DIR / path
 
 def get_connection():
     return sqlite3.connect(DB_PATH)
@@ -67,6 +74,12 @@ def get_all_questions():
     rows = conn.execute("SELECT id, text, tags FROM questions").fetchall()
     conn.close()
     return [{"id": r[0], "text": r[1], "tags": json.loads(r[2])} for r in rows]
+
+def get_questions_by_tags(filters):
+    # Filter in Python after loading every row. Fine for a small bank; at large scale
+    # you would filter inside SQLite with json_extract(tags, '$.key') or an index.
+    return [q for q in get_all_questions()
+            if all((q["tags"] or {}).get(key) == value for key, value in filters.items())]
 
 def get_missing_embeddings():
     conn = get_connection()

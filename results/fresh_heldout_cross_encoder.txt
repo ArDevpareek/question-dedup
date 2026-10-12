@@ -1,0 +1,63 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:  30%|███       | 32/105 [00:00<00:00, 306.32it/s]Loading weights:  60%|██████    | 63/105 [00:00<00:00, 244.46it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 339.41it/s]
+=== Cross-encoder scores by category ===
+paraphrase                     (duplicate) scores 0.00 to 0.59
+low_overlap_paraphrase         (duplicate) scores 0.00 to 0.00
+numbers_changed                (duplicate) scores 0.00 to 0.02
+unit_change                    (duplicate) scores 0.00 to 0.00
+word_order_same_meaning        (duplicate) scores 0.83 to 0.83
+extra_part                     (duplicate) scores 0.17 to 0.90
+opposite_case                  (different) scores 0.97 to 0.98
+definition_vs_calculation      (different) scores 0.00 to 0.00
+near_miss_wording              (different) scores 0.01 to 0.86
+same_topic_different_concept   (different) scores 0.00 to 0.05
+
+=== Cross-encoder alone, different lines ===
+line 0.3: precision 0.50 | recall 0.21 | missed 11 | false alarms  3
+line 0.5: precision 0.50 | recall 0.21 | missed 11 | false alarms  3
+line 0.7: precision 0.40 | recall 0.14 | missed 12 | false alarms  3
+line 0.9: precision 0.33 | recall 0.07 | missed 13 | false alarms  2
+
+=== Mistakes at line 0.5 ===
+F1   paraphrase                     expected duplicate ce 0.02
+      A: What is refraction of light?
+      B: Define refraction of light.
+F2   paraphrase                     expected duplicate ce 0.00
+      A: Why does a pencil partly immersed in water appear bent?
+      B: A straight stick dipped in water looks broken at the surface. Explain why.
+F4   paraphrase                     expected duplicate ce 0.12
+      A: What is the SI unit of electric resistance?
+      B: In which unit is resistance measured in the SI system?
+F5   low_overlap_paraphrase         expected duplicate ce 0.00
+      A: What is myopia?
+      B: Explain short-sightedness.
+F6   low_overlap_paraphrase         expected duplicate ce 0.00
+      A: Why does the sky appear blue?
+      B: Explain the scattering phenomenon responsible for the colour of the clear daytime sky.
+F7   paraphrase                     expected duplicate ce 0.03
+      A: How is an ammeter connected in a circuit?
+      B: In what way should an ammeter be placed in a circuit to measure current?
+F8   numbers_changed                expected duplicate ce 0.02
+      A: A lens has a focal length of 40 cm. Find its power.
+      B: Calculate the power of a lens of focal length 25 cm.
+F9   numbers_changed                expected duplicate ce 0.00
+      A: A current of 2 A flows through a resistor of 5 Ω. Find the potential difference across it.
+      B: What potential difference is needed to drive a current of 0.5 A through a 12 Ω resistor?
+F10  numbers_changed                expected duplicate ce 0.00
+      A: Light travels from air into glass of refractive index 1.5. Find the speed of light in glass.
+      B: The refractive index of water is 1.33. What is the speed of light in water?
+F11  unit_change                    expected duplicate ce 0.00
+      A: Find the power of a lens of focal length 0.5 m.
+      B: Find the power of a lens whose focal length is 50 cm.
+F14  extra_part                     expected duplicate ce 0.17
+      A: State the laws of refraction of light.
+      B: State the laws of refraction of light. Which of these laws is known as Snell's law?
+F15  opposite_case                  expected different ce 0.97
+      A: Light travels from glass into air. Does it bend towards or away from the normal?
+      B: Light travels from air into glass. Does it bend towards or away from the normal?
+F16  opposite_case                  expected different ce 0.98
+      A: Which colour of white light deviates the most when it passes through a glass prism?
+      B: Which colour of white light deviates the least when it passes through a glass prism?
+F19  near_miss_wording              expected different ce 0.86
+      A: Name the lens that always forms a virtual, erect and diminished image.
+      B: Name the lens that can form a real and inverted image.

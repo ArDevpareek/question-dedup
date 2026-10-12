@@ -1,0 +1,53 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Pairs: fresh_pairs.json (26 pairs, 14 duplicate, 12 different)
+Judge verdicts from judge_cache.json (cache version 0c86fbfe3100), no new LLM calls
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1362.39it/s]
+
+=== 1. Final setting (1.01, 0.5), numbers guard ON, all 26 pairs (the whole file is a test set) ===
+final (1.01, 0.5)                  precision 1.00 | recall 0.93 | missed dups  1 | false alarms  0 | review  0 | judge calls 24
+judge only (for comparison)        precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 26
+
+=== 2. Per category, final setting (1.01, 0.5), guard ON ===
+paraphrase                     (duplicate) pairs 5 | correct 5 | missed 0 | false alarms 0 | review 0 | judge calls 5
+low_overlap_paraphrase         (duplicate) pairs 2 | correct 1 | missed 1 | false alarms 0 | review 0 | judge calls 1
+numbers_changed                (duplicate) pairs 3 | correct 3 | missed 0 | false alarms 0 | review 0 | judge calls 3
+unit_change                    (duplicate) pairs 1 | correct 1 | missed 0 | false alarms 0 | review 0 | judge calls 1
+word_order_same_meaning        (duplicate) pairs 1 | correct 1 | missed 0 | false alarms 0 | review 0 | judge calls 1
+extra_part                     (duplicate) pairs 2 | correct 2 | missed 0 | false alarms 0 | review 0 | judge calls 2
+opposite_case                  (different) pairs 2 | correct 2 | missed 0 | false alarms 0 | review 0 | judge calls 2
+definition_vs_calculation      (different) pairs 2 | correct 2 | missed 0 | false alarms 0 | review 0 | judge calls 1
+near_miss_wording              (different) pairs 4 | correct 4 | missed 0 | false alarms 0 | review 0 | judge calls 4
+same_topic_different_concept   (different) pairs 4 | correct 4 | missed 0 | false alarms 0 | review 0 | judge calls 4
+
+=== 3. Every pair, final setting (1.01, 0.5), guard ON ===
+F1   paraphrase                     expected duplicate got duplicate by judge     score 0.93  judge: duplicate
+F2   paraphrase                     expected duplicate got duplicate by judge     score 0.62  judge: duplicate
+F3   paraphrase                     expected duplicate got duplicate by judge     score 0.66  judge: duplicate
+F4   paraphrase                     expected duplicate got duplicate by judge     score 0.86  judge: duplicate
+F5   low_overlap_paraphrase         expected duplicate got different by embedding score 0.44  judge: duplicate  MISTAKE
+F6   low_overlap_paraphrase         expected duplicate got duplicate by judge     score 0.72  judge: duplicate
+F7   paraphrase                     expected duplicate got duplicate by judge     score 0.79  judge: duplicate
+F8   numbers_changed                expected duplicate got duplicate by judge     score 0.83  judge: duplicate
+F9   numbers_changed                expected duplicate got duplicate by judge     score 0.62  judge: duplicate
+F10  numbers_changed                expected duplicate got duplicate by judge     score 0.71  judge: duplicate
+F11  unit_change                    expected duplicate got duplicate by judge     score 0.88  judge: duplicate
+F12  word_order_same_meaning        expected duplicate got duplicate by judge     score 0.89  judge: duplicate
+F13  extra_part                     expected duplicate got duplicate by judge     score 0.86  judge: duplicate
+F14  extra_part                     expected duplicate got duplicate by judge     score 0.89  judge: duplicate
+F15  opposite_case                  expected different got different by judge     score 1.00  judge: different
+F16  opposite_case                  expected different got different by judge     score 0.99  judge: different
+F17  definition_vs_calculation      expected different got different by judge     score 0.70  judge: different
+F18  definition_vs_calculation      expected different got different by embedding score 0.37  judge: different
+F19  near_miss_wording              expected different got different by judge     score 0.81  judge: different
+F20  near_miss_wording              expected different got different by judge     score 0.85  judge: different
+F21  near_miss_wording              expected different got different by judge     score 0.71  judge: different
+F22  near_miss_wording              expected different got different by judge     score 0.80  judge: different
+F23  same_topic_different_concept   expected different got different by judge     score 0.64  judge: different
+F24  same_topic_different_concept   expected different got different by judge     score 0.52  judge: different
+F25  same_topic_different_concept   expected different got different by judge     score 0.56  judge: different
+F26  same_topic_different_concept   expected different got different by judge     score 0.57  judge: different
+
+=== 4. Mistakes with the final setting (1.01, 0.5), guard ON ===
+F5   low_overlap_paraphrase         expected duplicate got different score 0.44  judge: duplicate
+      A: What is myopia?
+      B: Explain short-sightedness.

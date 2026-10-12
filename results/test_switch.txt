@@ -1,0 +1,20 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 10 questions and 3 clusters in 0.00s (newly embedded: 0)
+Loaded 10 questions and 3 clusters in 0.00s (newly embedded: 0)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1996.96it/s]
+
+Define reflection of light.
+   brute force : semantic_duplicate best 0.99 ['Q2']  (checked 10)
+   clustered   : semantic_duplicate best 0.99 ['Q1']  (checked 8)
+
+Why is the word AMBULANCE written in reverse on ambulances?
+   brute force : new                best 0.17 []  (checked 10)
+   clustered   : new                best 0.17 []  (checked 1)
+
+How many images are formed by two plane mirrors kept at 90 degrees?
+   brute force : new                best 0.60 []  (checked 10)
+   clustered   : new                best 0.60 []  (checked 1)
+
+What is the focal length of a plane mirror?
+   brute force : new                best 0.64 []  (checked 10)
+   clustered   : new                best 0.64 []  (checked 1)

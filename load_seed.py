@@ -1,10 +1,13 @@
 import json
+from pathlib import Path
 from store import create_table, add_question, get_all_questions
 from backfill import fill_missing_embeddings
 
+SEED_FILE = Path(__file__).resolve().parent / "data" / "seed_questions.json"
+
 create_table()
 
-with open("seed_questions.json", encoding="utf-8") as f:
+with open(SEED_FILE, encoding="utf-8") as f:
     seed = json.load(f)
 
 for q in seed:

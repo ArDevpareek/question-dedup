@@ -1,9 +1,17 @@
-import json
 import sys
+from pathlib import Path
+# The core modules live one folder up, in the project root, so add it to the import path.
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+import json
 from sentence_transformers import CrossEncoder
 from normalize import make_hash
 
-PAIRS_FILE = sys.argv[1] if len(sys.argv) > 1 else "test_pairs.json"
+def find_file(name):
+    path = Path(name)
+    return path if path.exists() else ROOT / name
+
+PAIRS_FILE = find_file(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data" / "test_pairs.json"
 
 with open(PAIRS_FILE, encoding="utf-8") as f:
     pairs = json.load(f)

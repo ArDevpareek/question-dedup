@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1895.40it/s]
+Embedding: 4.7 ms per question
+   re-embedding 10,000 questions every run would take about 47 s
+   re-embedding 100,000 questions every run would take about 471 s
+Search in   1,000 questions: 0.19 ms
+Search in  10,000 questions: 3.48 ms
+Search in 100,000 questions: 25.82 ms

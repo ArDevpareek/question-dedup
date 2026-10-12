@@ -1,0 +1,10 @@
+Settings: query noise 0.9, spread 0.6
+Average similarity between two random fake questions: 0.49
+Brute force: 8.99 ms per query (searches all 100,000)
+Built 316 clusters in 6.4 s
+
+nprobe= 1: 1.00 ms per query | checked 647 questions on average | found the true closest match 185/200 times
+nprobe= 2: 3.96 ms per query | checked 2,029 questions on average | found the true closest match 195/200 times
+nprobe= 5: 9.42 ms per query | checked 6,022 questions on average | found the true closest match 200/200 times
+nprobe=10: 15.45 ms per query | checked 12,009 questions on average | found the true closest match 200/200 times
+nprobe=20: 27.48 ms per query | checked 22,607 questions on average | found the true closest match 200/200 times
