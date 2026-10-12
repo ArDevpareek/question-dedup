@@ -1,0 +1,118 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2575.28it/s]
+The judge prompt or model changed, so the old saved verdicts are not used.
+Judge: 56 pairs still need a verdict
+   1/56 P1: duplicate
+   2/56 P2: duplicate
+   3/56 P3: duplicate
+   4/56 P4: duplicate
+   5/56 P5: duplicate
+   6/56 P6: duplicate
+   7/56 P7: duplicate
+   8/56 P8: duplicate
+   9/56 P9: duplicate
+   10/56 P10: duplicate
+   11/56 P11: duplicate
+   12/56 P12: duplicate
+   13/56 N1: duplicate
+   14/56 N2: duplicate
+   15/56 N3: duplicate
+   16/56 N4: duplicate
+   17/56 N5: duplicate
+   18/56 N6: duplicate
+   19/56 X1: duplicate
+   20/56 X2: duplicate
+   21/56 X3: duplicate
+   22/56 X4: duplicate
+   23/56 X5: duplicate
+   24/56 X6: duplicate
+   25/56 D1: duplicate
+   26/56 D2: different
+   27/56 D3: different
+   28/56 D4: different
+   29/56 D5: different
+   30/56 D6: different
+   31/56 D7: duplicate
+   32/56 D8: different
+   33/56 D9: different
+   34/56 D10: different
+   35/56 D11: different
+   36/56 D12: different
+   37/56 D13: different
+   38/56 D14: different
+   39/56 W1: different
+   40/56 W2: different
+   41/56 W3: different
+   42/56 W4: different
+   43/56 W5: different
+   44/56 W6: different
+   45/56 W7: different
+   46/56 W8: different
+   47/56 T1: different
+   48/56 T2: different
+   49/56 T3: different
+   50/56 T4: different
+   51/56 T5: different
+   52/56 T6: different
+   53/56 C1: duplicate
+   54/56 C2: duplicate
+   55/56 C3: duplicate
+   56/56 C4: duplicate
+
+=== 1. Embedding scores by category ===
+exact                          (duplicate) scores 0.94 to 1.00
+paraphrase                     (duplicate) scores 0.62 to 0.98
+numbers_changed                (duplicate) scores 0.74 to 0.89
+extra_part                     (duplicate) scores 0.81 to 0.93
+same_topic_different_concept   (different) scores 0.35 to 0.85
+near_miss_wording              (different) scores 0.68 to 0.97
+different_topic                (different) scores 0.41 to 0.80
+other_subject_paraphrase       (duplicate) scores 0.39 to 0.90
+
+=== 2. Each layer on its own (all 60 pairs) ===
+embedding only, line at 0.60       precision 0.56 | recall 0.97 | missed dups  1 | false alarms 24 | review  0 | judge calls  0
+embedding only, line at 0.70       precision 0.58 | recall 0.94 | missed dups  2 | false alarms 22 | review  0 | judge calls  0
+embedding only, line at 0.80       precision 0.73 | recall 0.84 | missed dups  5 | false alarms 10 | review  0 | judge calls  0
+embedding only, line at 0.90       precision 0.81 | recall 0.41 | missed dups 19 | false alarms  3 | review  0 | judge calls  0
+judge only (no embedding lines)    precision 0.94 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 56
+cascade now (0.92, 0.75)           precision 0.91 | recall 0.91 | missed dups  3 | false alarms  3 | review  0 | judge calls 34
+
+=== 3. Tuning on the TUNE half (30 pairs) ===
+cascade (0.92, 0.30)               precision 0.84 | recall 1.00 | missed dups  0 | false alarms  3 | review  0 | judge calls 24
+cascade (0.92, 0.40)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 23
+cascade (0.92, 0.50)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 22
+cascade (0.92, 0.60)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 22
+cascade (0.92, 0.70)               precision 0.88 | recall 0.94 | missed dups  1 | false alarms  2 | review  0 | judge calls 21
+cascade (0.92, 0.75)               precision 0.88 | recall 0.94 | missed dups  1 | false alarms  2 | review  0 | judge calls 17
+cascade (0.95, 0.30)               precision 0.84 | recall 1.00 | missed dups  0 | false alarms  3 | review  0 | judge calls 25
+cascade (0.95, 0.40)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 24
+cascade (0.95, 0.50)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 23
+cascade (0.95, 0.60)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 23
+cascade (0.95, 0.70)               precision 0.88 | recall 0.94 | missed dups  1 | false alarms  2 | review  0 | judge calls 22
+cascade (0.95, 0.75)               precision 0.88 | recall 0.94 | missed dups  1 | false alarms  2 | review  0 | judge calls 18
+cascade (0.98, 0.30)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 28
+cascade (0.98, 0.40)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 27
+cascade (0.98, 0.50)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 26
+cascade (0.98, 0.60)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 26
+cascade (0.98, 0.70)               precision 0.94 | recall 0.94 | missed dups  1 | false alarms  1 | review  0 | judge calls 25
+cascade (0.98, 0.75)               precision 0.94 | recall 0.94 | missed dups  1 | false alarms  1 | review  0 | judge calls 21
+cascade (1.01, 0.30)               precision 0.89 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 28
+cascade (1.01, 0.40)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 27
+cascade (1.01, 0.50)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 26
+cascade (1.01, 0.60)               precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 26
+cascade (1.01, 0.70)               precision 0.94 | recall 0.94 | missed dups  1 | false alarms  1 | review  0 | judge calls 25
+cascade (1.01, 0.75)               precision 0.94 | recall 0.94 | missed dups  1 | false alarms  1 | review  0 | judge calls 21
+
+Chosen: (0.98, 0.5) (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===
+cascade now (0.92, 0.75)           precision 0.93 | recall 0.88 | missed dups  2 | false alarms  1 | review  0 | judge calls 17
+cascade chosen (0.98, 0.5)         precision 1.00 | recall 0.94 | missed dups  1 | false alarms  0 | review  0 | judge calls 26
+
+=== 5. Mistakes with the chosen setting (0.98, 0.5) (all 60 pairs) ===
+D1   same_topic_different_concept   expected different got duplicate score 0.85  judge: duplicate
+      A: What is the angle of reflection?
+      B: The angle of incidence is 30°. What is the angle of reflection?
+C4   other_subject_paraphrase       expected duplicate got different score 0.39  judge: duplicate
+      A: Who wrote the Indian national anthem?
+      B: Name the author of Jana Gana Mana.

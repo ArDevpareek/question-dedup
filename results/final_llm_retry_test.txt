@@ -1,0 +1,10 @@
+   LLM busy (429 RESOURCE_EXHAUSTED), retry 1/4 in 0s
+   LLM busy (503 UNAVAILABLE), retry 2/4 in 0s
+two 429s then success        calls 3 -> returned {'ok': True}
+   LLM busy (429 RESOURCE_EXHAUSTED), retry 1/4 in 0s
+   LLM busy (429 RESOURCE_EXHAUSTED), retry 2/4 in 0s
+   LLM busy (429 RESOURCE_EXHAUSTED), retry 3/4 in 0s
+   LLM busy (429 RESOURCE_EXHAUSTED), retry 4/4 in 0s
+always 429 (5 failures)      calls 5 -> raised: 429 RESOURCE_EXHAUSTED. x
+per-day limit                calls 1 -> raised: 429 RESOURCE_EXHAUSTED. quotaId GenerateRequestsPe
+other error                  calls 1 -> raised: 400 INVALID_ARGUMENT. bad request

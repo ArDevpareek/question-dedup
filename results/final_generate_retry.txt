@@ -1,0 +1,36 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 38 questions and 5 clusters in 0.01s (newly embedded: 0)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1126.15it/s]
+
+--- Round 1: sent 15 existing + 0 rejected, asked for 10, got 10 ---
+  Context sent to the LLM:
+     - Define the reflection of light.
+     - What is reflection?
+     - A ray of light strikes a plane mirror normally at an angle of 90 degrees to the surface. Along which path will the reflected ray travel, and why?
+     - Define the pole of a spherical mirror.
+     - Explain how two plane mirrors arranged parallel to each other inside a periscope tube enable a person to see over obstacles.
+     - State the laws of reflection of light.
+     - What is the angle of reflection?
+     - Explain how the first law of reflection ensures that the incident ray, the normal, and the reflected ray all lie in the same geometric plane.
+     - According to the Cartesian sign convention, state the sign of the focal length of a convex mirror.
+     - If you raise your right hand while looking into a plane mirror, which hand appears to be raised in the image, and what is this phenomenon called?
+     - Describe a practical situation where light undergoes total internal reflection instead of standard reflection at a boundary.
+     - What is the difference between regular and diffuse reflection?
+     - The angle of incidence is 30°. What is the angle of reflection?
+     - Define the principal focus of a convex mirror, specifying whether it is a real or virtual point.
+     - Why do convex mirrors provide a wider field of view compared to plane mirrors of the same size?
+  ACCEPT Q39 [Lateral inversion mechanism] (cluster 1, by judge): Explain why a plane mirror reverses an image left-to-right rather than top-to-bottom.
+  REJECT : Calculate the number of images formed when an object is placed symmetrically between two plane mirrors inclined at an angle of 60 degrees to each other.
+           semantic_duplicate of ['Q13'] (by judge)
+  ACCEPT Q40 [Spherical mirror aperture] (cluster 4, by judge): Define the term 'aperture' in the context of a spherical mirror.
+  REJECT : Describe why a concave mirror is the preferred choice for collecting and focusing solar energy in a solar cooker.
+           semantic_duplicate of ['Q25'] (by judge)
+  ACCEPT Q41 [Mirror formula application] (cluster 0, by judge): An object 4 cm in size is placed at 25 cm in front of a concave mirror of focal length 15 cm. At what distance from the mirror should a screen be placed in order to obtain a sharp image?
+  REJECT : Compare real and virtual images formed by mirrors based on two distinct properties: screen projection and orientation relative to the object.
+           semantic_duplicate of ['Q20'] (by judge)
+  ACCEPT Q42 [Ray tracing for concave mirror center of curvature] (cluster 1, by judge): A ray of light passing through the center of curvature of a concave mirror is reflected back along its own path. Give the physical reason for this phenomenon.
+  REVIEW : If the linear magnification produced by a spherical mirror has a negative value, what does this indicate about the nature and orientation of the image?
+           reason: Only one question has numbers. The new question is a simplified version of Q37 asking for the same core knowledge about magnification and image properties.
+  ACCEPT Q43 [Parabolic mirror aberration correction] (cluster 1, by judge): Explain how using a parabolic mirror instead of a spherical mirror helps in eliminating spherical aberration in reflecting telescopes.
+
+Accepted: 5   Rejected: 3   Review: 1   Checked: 9

@@ -1,0 +1,76 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+C:\Users\acer\AppData\Roaming\Python\Python314\site-packages\huggingface_hub\file_download.py:150: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\acer\.cache\huggingface\hub\models--cross-encoder--quora-distilroberta-base. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+C:\Users\acer\AppData\Roaming\Python\Python314\site-packages\huggingface_hub\file_download.py:150: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\acer\.cache\huggingface\hub. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 13/105 [00:00<00:00, 129.69it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 702.45it/s]
+=== Cross-encoder scores by category ===
+exact                          (duplicate) scores 0.99 to 1.00
+paraphrase                     (duplicate) scores 0.01 to 0.99
+numbers_changed                (duplicate) scores 0.00 to 0.39
+extra_part                     (duplicate) scores 0.17 to 0.99
+same_topic_different_concept   (different) scores 0.00 to 0.27
+near_miss_wording              (different) scores 0.00 to 0.66
+different_topic                (different) scores 0.00 to 0.05
+other_subject_paraphrase       (duplicate) scores 0.00 to 0.87
+
+=== Cross-encoder alone, different lines ===
+line 0.3: precision 0.86 | recall 0.56 | missed 14 | false alarms  3
+line 0.5: precision 0.89 | recall 0.53 | missed 15 | false alarms  2
+line 0.7: precision 1.00 | recall 0.50 | missed 16 | false alarms  0
+line 0.9: precision 1.00 | recall 0.44 | missed 18 | false alarms  0
+
+=== Mistakes at line 0.5 ===
+P1   paraphrase                     expected duplicate ce 0.06
+      A: What is meant by the principal focus of a concave mirror?
+      B: Define the principal focus of a concave mirror.
+P5   paraphrase                     expected duplicate ce 0.07
+      A: What is the angle of incidence when a ray falls normally on a mirror?
+      B: If a light ray strikes a mirror perpendicularly, what is its angle of incidence?
+P7   paraphrase                     expected duplicate ce 0.01
+      A: What is diffuse reflection?
+      B: Define irregular reflection.
+P8   paraphrase                     expected duplicate ce 0.21
+      A: Which mirror is used by dentists to see enlarged images of teeth?
+      B: Name the type of mirror a dentist uses to get a magnified view of the teeth.
+N1   numbers_changed                expected duplicate ce 0.01
+      A: Two plane mirrors are inclined at 60°. How many images of an object placed between them are formed?
+      B: How many images are formed when two plane mirrors are placed at an angle of 45° to each other?
+N2   numbers_changed                expected duplicate ce 0.00
+      A: The angle of incidence is 30°. What is the angle of reflection?
+      B: A ray makes an angle of incidence of 55°. Find the angle of reflection.
+N3   numbers_changed                expected duplicate ce 0.04
+      A: A concave mirror has a focal length of 15 cm. An object is placed 25 cm in front of it. Find the image distance.
+      B: An object is kept 30 cm in front of a concave mirror of focal length 20 cm. Where is the image formed?
+N4   numbers_changed                expected duplicate ce 0.01
+      A: Find the focal length of a convex mirror whose radius of curvature is 32 cm.
+      B: A convex mirror has a radius of curvature of 20 cm. Calculate its focal length.
+N5   numbers_changed                expected duplicate ce 0.05
+      A: A person stands 2 m in front of a plane mirror. How far is the person from their image?
+      B: An object is placed 5 m from a plane mirror. What is the distance between the object and its image?
+N6   numbers_changed                expected duplicate ce 0.39
+      A: A ray of light is incident on a plane mirror at 40°. Through what angle is it deviated?
+      B: Find the angle of deviation when a light ray strikes a plane mirror with an angle of incidence of 25°.
+X3   extra_part                     expected duplicate ce 0.20
+      A: State the laws of reflection of light.
+      B: State the laws of reflection of light and draw a labelled diagram to illustrate them.
+X6   extra_part                     expected duplicate ce 0.17
+      A: What is the principal axis of a spherical mirror?
+      B: Define the principal axis of a spherical mirror. Show it in a neat diagram.
+W3   near_miss_wording              expected different ce 0.66
+      A: Which mirror always forms a virtual, erect and diminished image?
+      B: Which mirror always forms a virtual, erect image of the same size as the object?
+W7   near_miss_wording              expected different ce 0.59
+      A: Define the principal focus of a concave mirror.
+      B: Define the principal focus of a convex mirror.
+C1   other_subject_paraphrase       expected duplicate ce 0.00
+      A: What is photosynthesis?
+      B: Define the process of photosynthesis.
+C3   other_subject_paraphrase       expected duplicate ce 0.03
+      A: What is the chemical formula of water?
+      B: Write the molecular formula of water.
+C4   other_subject_paraphrase       expected duplicate ce 0.00
+      A: Who wrote the Indian national anthem?
+      B: Name the author of Jana Gana Mana.

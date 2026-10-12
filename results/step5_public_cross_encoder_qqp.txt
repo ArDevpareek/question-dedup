@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 14/105 [00:00<00:00, 130.49it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 547.73it/s]
+=== Cross-encoder scores by category ===
+qqp                            (different) scores 0.00 to 1.00
+
+=== Cross-encoder alone, different lines ===
+line 0.3: precision 0.88 | recall 0.88 | missed  2 | false alarms  2
+line 0.5: precision 0.94 | recall 0.88 | missed  2 | false alarms  1
+line 0.7: precision 0.94 | recall 0.88 | missed  2 | false alarms  1
+line 0.9: precision 0.93 | recall 0.82 | missed  3 | false alarms  1
+
+=== Mistakes at line 0.5 ===
+QQP13 qqp                            expected duplicate ce 0.13
+      A: Who are some of the most dangerous or worst politicians in India?
+      B: Who is the worst leader of India? And why?
+QQP27 qqp                            expected duplicate ce 0.03
+      A: What are some of the best jokes?
+      B: What is the best joke you have ever heard?
+QQP39 qqp                            expected different ce 1.00
+      A: How do I speak English fluently in five days?
+      B: How can I improve intonation and speak english fluently within few days?

@@ -1,0 +1,241 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3636.08it/s]
+Judge: 99 pairs still need a verdict
+   1/99 QQP1: review
+   2/99 QQP2: different
+   3/99 QQP3: duplicate
+   4/99 QQP4: duplicate
+   5/99 QQP5: duplicate
+   6/99 QQP6: different
+   7/99 QQP7: different
+   8/99 QQP8: different
+   9/99 QQP9: duplicate
+   10/99 QQP10: duplicate
+   11/99 QQP11: different
+   12/99 QQP12: different
+   13/99 QQP13: duplicate
+   14/99 QQP14: different
+   15/99 QQP15: different
+   16/99 QQP17: different
+   17/99 QQP18: duplicate
+   18/99 QQP19: different
+   19/99 QQP20: duplicate
+   20/99 QQP21: different
+   21/99 QQP22: different
+   22/99 QQP23: duplicate
+   23/99 QQP24: duplicate
+   24/99 QQP25: duplicate
+   25/99 QQP26: duplicate
+   26/99 QQP27: duplicate
+   27/99 QQP28: different
+   28/99 QQP29: duplicate
+   29/99 QQP30: different
+   30/99 QQP31: duplicate
+   31/99 QQP32: different
+   32/99 QQP33: different
+   33/99 QQP34: different
+   34/99 QQP35: different
+   35/99 QQP36: different
+   36/99 QQP37: different
+   37/99 QQP38: different
+   38/99 QQP39: duplicate
+   39/99 QQP40: different
+   40/99 QQP41: different
+   41/99 QQP42: different
+   42/99 QQP43: different
+   43/99 QQP44: different
+   44/99 QQP45: different
+   45/99 QQP46: duplicate
+   46/99 QQP47: duplicate
+   47/99 QQP48: different
+   48/99 QQP49: duplicate
+   49/99 QQP50: different
+   50/99 PAWS1: duplicate
+   51/99 PAWS2: duplicate
+   52/99 PAWS3: duplicate
+   53/99 PAWS4: different
+   54/99 PAWS5: duplicate
+   55/99 PAWS6: different
+   56/99 PAWS7: duplicate
+   57/99 PAWS8: duplicate
+   58/99 PAWS9: different
+   59/99 PAWS10: duplicate
+   60/99 PAWS11: duplicate
+   61/99 PAWS12: duplicate
+   62/99 PAWS13: duplicate
+   63/99 PAWS14: duplicate
+   64/99 PAWS15: different
+   65/99 PAWS16: duplicate
+   66/99 PAWS17: duplicate
+   67/99 PAWS18: different
+   68/99 PAWS19: different
+   69/99 PAWS20: different
+   70/99 PAWS21: duplicate
+   71/99 PAWS22: different
+   72/99 PAWS23: duplicate
+   73/99 PAWS24: different
+   74/99 PAWS25: duplicate
+   75/99 PAWS26: duplicate
+   76/99 PAWS27: duplicate
+   77/99 PAWS28: duplicate
+   78/99 PAWS29: duplicate
+   79/99 PAWS30: different
+   80/99 PAWS31: duplicate
+   81/99 PAWS32: different
+   82/99 PAWS33: duplicate
+   83/99 PAWS34: duplicate
+   84/99 PAWS35: duplicate
+   85/99 PAWS36: duplicate
+   86/99 PAWS37: duplicate
+   87/99 PAWS38: duplicate
+   88/99 PAWS39: different
+   89/99 PAWS40: different
+   90/99 PAWS41: duplicate
+   91/99 PAWS42: duplicate
+   92/99 PAWS43: duplicate
+   93/99 PAWS44: duplicate
+   94/99 PAWS45: duplicate
+   95/99 PAWS46: duplicate
+   96/99 PAWS47: duplicate
+   97/99 PAWS48: different
+   98/99 PAWS49: duplicate
+   99/99 PAWS50: duplicate
+
+=== 1. Embedding scores by category ===
+qqp                            (different) scores 0.01 to 0.99
+paws                           (duplicate) scores 0.91 to 1.00
+
+=== 2. Each layer on its own (all 60 pairs) ===
+embedding only, line at 0.60       precision 0.52 | recall 1.00 | missed dups  0 | false alarms 38 | review  0 | judge calls  0
+embedding only, line at 0.70       precision 0.53 | recall 0.98 | missed dups  1 | false alarms 36 | review  0 | judge calls  0
+embedding only, line at 0.80       precision 0.54 | recall 0.93 | missed dups  3 | false alarms 32 | review  0 | judge calls  0
+embedding only, line at 0.90       precision 0.52 | recall 0.71 | missed dups 12 | false alarms 27 | review  0 | judge calls  0
+judge only (no embedding lines)    precision 0.68 | recall 0.95 | missed dups  2 | false alarms 18 | review  1 | judge calls 99
+cascade now (0.92, 0.75)           precision 0.57 | recall 0.95 | missed dups  2 | false alarms 29 | review  0 | judge calls 21
+
+=== 3. Tuning on the TUNE half (30 pairs) ===
+cascade (0.92, 0.30)               precision 0.66 | recall 0.96 | missed dups  1 | false alarms 13 | review  0 | judge calls 19
+cascade (0.92, 0.40)               precision 0.66 | recall 0.96 | missed dups  1 | false alarms 13 | review  0 | judge calls 17
+cascade (0.92, 0.50)               precision 0.66 | recall 0.96 | missed dups  1 | false alarms 13 | review  0 | judge calls 16
+cascade (0.92, 0.60)               precision 0.66 | recall 0.96 | missed dups  1 | false alarms 13 | review  0 | judge calls 16
+cascade (0.92, 0.70)               precision 0.65 | recall 0.92 | missed dups  2 | false alarms 13 | review  0 | judge calls 15
+cascade (0.92, 0.75)               precision 0.67 | recall 0.92 | missed dups  2 | false alarms 12 | review  0 | judge calls 14
+cascade (0.95, 0.30)               precision 0.68 | recall 0.96 | missed dups  1 | false alarms 12 | review  0 | judge calls 23
+cascade (0.95, 0.40)               precision 0.68 | recall 0.96 | missed dups  1 | false alarms 12 | review  0 | judge calls 21
+cascade (0.95, 0.50)               precision 0.68 | recall 0.96 | missed dups  1 | false alarms 12 | review  0 | judge calls 20
+cascade (0.95, 0.60)               precision 0.68 | recall 0.96 | missed dups  1 | false alarms 12 | review  0 | judge calls 20
+cascade (0.95, 0.70)               precision 0.67 | recall 0.92 | missed dups  2 | false alarms 12 | review  0 | judge calls 19
+cascade (0.95, 0.75)               precision 0.69 | recall 0.92 | missed dups  2 | false alarms 11 | review  0 | judge calls 18
+cascade (0.98, 0.30)               precision 0.71 | recall 0.96 | missed dups  1 | false alarms 10 | review  0 | judge calls 34
+cascade (0.98, 0.40)               precision 0.71 | recall 0.96 | missed dups  1 | false alarms 10 | review  0 | judge calls 32
+cascade (0.98, 0.50)               precision 0.71 | recall 0.96 | missed dups  1 | false alarms 10 | review  0 | judge calls 31
+cascade (0.98, 0.60)               precision 0.71 | recall 0.96 | missed dups  1 | false alarms 10 | review  0 | judge calls 31
+cascade (0.98, 0.70)               precision 0.71 | recall 0.92 | missed dups  2 | false alarms 10 | review  0 | judge calls 30
+cascade (0.98, 0.75)               precision 0.73 | recall 0.92 | missed dups  2 | false alarms  9 | review  0 | judge calls 29
+cascade (1.01, 0.30)               precision 0.73 | recall 0.92 | missed dups  2 | false alarms  9 | review  0 | judge calls 46
+cascade (1.01, 0.40)               precision 0.73 | recall 0.92 | missed dups  2 | false alarms  9 | review  0 | judge calls 44
+cascade (1.01, 0.50)               precision 0.73 | recall 0.92 | missed dups  2 | false alarms  9 | review  0 | judge calls 43
+cascade (1.01, 0.60)               precision 0.73 | recall 0.92 | missed dups  2 | false alarms  9 | review  0 | judge calls 43
+cascade (1.01, 0.70)               precision 0.72 | recall 0.88 | missed dups  3 | false alarms  9 | review  0 | judge calls 42
+cascade (1.01, 0.75)               precision 0.74 | recall 0.88 | missed dups  3 | false alarms  8 | review  0 | judge calls 41
+
+Chosen: (0.92, 0.5) (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===
+cascade now (0.92, 0.75)           precision 0.47 | recall 1.00 | missed dups  0 | false alarms 17 | review  0 | judge calls  7
+cascade chosen (0.92, 0.5)         precision 0.47 | recall 1.00 | missed dups  0 | false alarms 17 | review  0 | judge calls 14
+
+=== 5. Mistakes with the chosen setting (0.92, 0.5) (all 60 pairs) ===
+QQP3 qqp                            expected different got duplicate score 0.81  judge: duplicate
+      A: What is the difference between aesthetic bodybuilding and normal bodybuilding?
+      B: What are the different workouts does Aesthetic bodybuilders do which Normal Bodybuilders don't?
+QQP10 qqp                            expected different got duplicate score 0.88  judge: duplicate
+      A: Is Economics good major?
+      B: Is economics a good major for an entrepreneur?
+QQP11 qqp                            expected duplicate got different score 0.80  judge: different
+      A: What are the benefits of adding boiled chicken to your diet?
+      B: How effective is the boiled chicken diet?
+QQP39 qqp                            expected different got duplicate score 0.74  judge: duplicate
+      A: How do I speak English fluently in five days?
+      B: How can I improve intonation and speak english fluently within few days?
+QQP45 qqp                            expected different got duplicate score 0.93  judge: different
+      A: What is the best poem that you have ever written?
+      B: What is the best poem ever written?
+QQP47 qqp                            expected different got duplicate score 0.81  judge: duplicate
+      A: Is it safe to jailbreak an iPhone?
+      B: Should I jailbreak my iPhone 4?
+PAWS2 paws                           expected different got duplicate score 0.99  judge: duplicate
+      A: In 1346 , a border war between Wolfenbüttel and the Archbishop of Magdeburg broke out .
+      B: In 1346 , the border war broke out between Magdeburg and the Archbishop of Wolfenbüttel .
+PAWS4 paws                           expected different got duplicate score 1.00  judge: different
+      A: The route is now Pennsylvania Route 287 from Tioga to US Route 15 northeast of Larrys Creek and Pennsylvania Route 328 from U.S. 15 to PA 549 .
+      B: The route is now Pennsylvania Route 287 from Larrys Creek to US Route 15 northeast of Tioga and Pennsylvania Route 328 from U.S. 15 to PA 549 .
+PAWS5 paws                           expected different got duplicate score 0.94  judge: duplicate
+      A: It is pressed on transparent yellow vinyl and was released by Cosmic Records in 1995 .
+      B: It is published on the transparent yellow vinyl and was pressed by Cosmic Records in 1995 .
+PAWS6 paws                           expected different got duplicate score 0.98  judge: different
+      A: The first effective air pump built for scientific purposes in England was manufactured by Robert Hooke for Robert Boyle in 1658 .
+      B: The first effective air pump constructed in England for scientific purposes was made in 1658 by Robert Boyle for Robert Hooke .
+PAWS7 paws                           expected different got duplicate score 0.96  judge: duplicate
+      A: The Roman writer Suetonius recorded an anecdote of the heroic centurion Cassius Scaeva , who fought under Caesar in the Battle of Dyrrachium :
+      B: The heroic writer Suetonius approached an anecdote of the Roman centurios Cassius Scaeva , who fought in the Battle of Dyrrachium under Caesar .
+PAWS9 paws                           expected different got duplicate score 0.98  judge: different
+      A: He was graduated from Mansfield College , and from the law department of Cumberland University , Lebanon , Tennessee , in 1872 .
+      B: He was graduated from Cumberland University in 1872 and from the Legal Department of Mansfield College , Lebanon , Tennessee .
+PAWS10 paws                           expected different got duplicate score 0.98  judge: duplicate
+      A: In 1928 , a children 's edition of poems from Biancos '' Songs of Innocence `` was published and selected and illustrated by William Blake .
+      B: In 1928 a children 's edition of poems from William Blake 's `` Songs of Innocence '' , selected and illustrated by Bianco , was published .
+PAWS11 paws                           expected different got duplicate score 1.00  judge: duplicate
+      A: Ignasiak is also a successful amateur golfer and now owns a Dairy Queen franchise in Saline , Michigan .
+      B: Ignasiak is now a successful amateur golfer and owns a Dairy Queen - Franchise in Saline , Michigan .
+PAWS14 paws                           expected different got duplicate score 0.99  judge: duplicate
+      A: Winnie Hill is a mountain in Oneonta , New York , in the central region of New York north of New York City .
+      B: Winnie Hill is a mountain located in the center of New York region New York north of Oneonta , New York .
+PAWS18 paws                           expected different got duplicate score 0.99  judge: different
+      A: The pianist was Paulena Carter , and Ben Gage was singer and announcer .
+      B: The pianist was Ben Ben Gage , and Paulena Carter was a singer and announcer .
+PAWS19 paws                           expected different got duplicate score 0.99  judge: different
+      A: In 1654 he studied with Eustache Le Sueur in Paris , and after Le Sueur 's death in 1655 , with Charles Le Brun .
+      B: In 1654 , he studied with Charles Le Brun in Paris , and after Le Sueur 's death in 1655 near Eustache Le Sueur .
+PAWS20 paws                           expected different got duplicate score 0.98  judge: different
+      A: In March 2008 , Day opened for Rufus Wainwright in the Opera House Napa Valley .
+      B: In March 2008 , Rufus Wainwright opened for Day at the Napa Valley Opera House .
+PAWS22 paws                           expected different got duplicate score 1.00  judge: different
+      A: He went to South Africa and returned to King Edward VII School .
+      B: He returned to South Africa and went to the King Edward VII School .
+PAWS24 paws                           expected different got duplicate score 0.99  judge: different
+      A: When the memory is used , old videos are usually deleted automatically to save space .
+      B: When the memory is deleted , old videos are usually automatically used to save space .
+PAWS26 paws                           expected different got duplicate score 0.98  judge: duplicate
+      A: It was chosen as the 7th best film at the 19th Yokohama Film Festival .
+      B: It was selected at the 7th Yokohama Film Festival as the 19th best film .
+PAWS28 paws                           expected different got duplicate score 0.97  judge: duplicate
+      A: He built weapon factories for Vtorov and Mikhelson in electrostal , Zatishye ( Moscow , Serpukhov ) and Bogorodsk ( Noginsk ) .
+      B: He built weapons factories for Vtorov and Mikhelson in Moscow , Serpukhov , Zatishye , Bogorodsk ( Noginsk ) .
+PAWS30 paws                           expected different got duplicate score 0.98  judge: different
+      A: At this time , the BdV was particularly interested in the intelligence services in East Berlin and the partner agencies in Moscow .
+      B: Intelligence services in Moscow and partner agencies in East Berlin were particularly interested in the BdV at this time .
+PAWS31 paws                           expected different got duplicate score 0.99  judge: duplicate
+      A: Raubenheimer is regarded as a car enthusiast and has remained in South Africa the `` father of the Mini Marcos .
+      B: Raubenheimer has remained a car enthusiast and is considered the `` father '' of the Mini Marcos in South Africa .
+PAWS32 paws                           expected different got duplicate score 0.97  judge: different
+      A: Raven was angered of course , but consumed by his work .
+      B: Raven was of course consumed , but angered by his work .
+PAWS36 paws                           expected different got duplicate score 0.94  judge: duplicate
+      A: Unique elements are the lattice-like gable apron and the attached bay .
+      B: The lattice-like gable apron , and the beveled bay , are unique elements. ``
+PAWS39 paws                           expected different got duplicate score 0.97  judge: different
+      A: Steve Cotterill left the club at the end of the season and was replaced by Craig Short .
+      B: Manager Craig Short left the club at the end of the season , and was replaced by Steve Cotterill .
+PAWS41 paws                           expected different got duplicate score 0.99  judge: duplicate
+      A: On September 8 , 2014 , Harris announced on his Twitter site that David Burtka and he were married on the weekend in Italy .
+      B: On September 8 , 2014 , David Burtka announced on his Twitter page that Harris and he were married over the weekend in Italy .
+PAWS42 paws                           expected different got duplicate score 0.95  judge: duplicate
+      A: As traditionally defined , several species from South America , one from Africa , several from Asia and two from Australia belong to the family .
+      B: As traditionally defined , the family includes several extant species from Australia , one from Africa , several from Asia , and two from South America .
+PAWS47 paws                           expected different got duplicate score 0.99  judge: duplicate
+      A: The Los Angeles County Department of Health Services operates the Monrovia Health Center in Rosemead , which serves Monrovia .
+      B: The Los Angeles County Department of Health Services operates the Monrovia Health Center in Monrovia , serving Rosemead .
+PAWS48 paws                           expected different got duplicate score 0.95  judge: different
+      A: According to music journalist Paul Lester , Palmer rose from the northern clubs in England to become `` elegant and sophisticated and become a master of different styles .
+      B: According to music journalist Paul Lester , Palmer rose from several clubs in England to become `` Northern '' and the master of elegant and demanding styles .

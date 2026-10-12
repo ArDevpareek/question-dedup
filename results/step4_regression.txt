@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  Q1 | got: new                | expected: new                | best:   -  [] | by: empty store | OK
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2810.74it/s]
+  Q2 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.94 ['Q1'] | by: embedding   | OK
+  Q3 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.90 ['Q1'] | by: judge       | OK
+         reason: It asks the same question about the reflection of light in different words.
+  Q4 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.93 ['Q1'] | by: embedding   | OK
+  Q5 | got: new                | expected: new                | best: 0.80 [] | by: judge       | OK
+         reason: It asks for the laws of reflection rather than a definition or explanation of the term.
+  Q6 | got: new                | expected: new                | best: 0.71 [] | by: embedding   | OK
+  Q7 | got: semantic_duplicate | expected: new                | best: 0.85 ['Q6'] | by: judge       | WRONG
+         reason: It is the same core question about the angle of reflection with a specific number added.
+  Q8 | got: review             | expected: review             | best: 0.86 ['Q1'] | by: judge       | OK
+         reason: The term 'reflection' is vague without context and could refer to light, waves, or personal reflection.
+  Q9 | got: new                | expected: new                | best: 0.66 [] | by: embedding   | OK
+ Q10 | got: exact_duplicate    | expected: exact_duplicate    | best: 1.00 ['Q2'] | by: exact       | OK
+
+Correct: 9/10   Wrong: 1   LLM judge calls: 4

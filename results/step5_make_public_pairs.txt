@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/363846 [00:00<?, ? examples/s]Generating train split:  75%|███████▍  | 272000/363846 [00:00<00:00, 2704770.81 examples/s]Generating train split: 100%|██████████| 363846/363846 [00:00<00:00, 3037030.98 examples/s]
+Generating validation split:   0%|          | 0/40430 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 40430/40430 [00:00<00:00, 1050238.51 examples/s]
+Generating test split:   0%|          | 0/390965 [00:00<?, ? examples/s]Generating test split:  76%|███████▋  | 299000/390965 [00:00<00:00, 2971490.81 examples/s]Generating test split: 100%|██████████| 390965/390965 [00:00<00:00, 3254281.75 examples/s]
+Generating train split:   0%|          | 0/49401 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 49401/49401 [00:00<00:00, 1140369.25 examples/s]
+Generating test split:   0%|          | 0/8000 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 8000/8000 [00:00<00:00, 458343.79 examples/s]
+Generating validation split:   0%|          | 0/8000 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 8000/8000 [00:00<00:00, 432374.62 examples/s]
+Saved 100 pairs

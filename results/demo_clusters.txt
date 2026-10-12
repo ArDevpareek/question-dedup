@@ -1,0 +1,16 @@
+Built 3 clusters from 10 questions
+
+Cluster 0 (1 questions)
+   Q6: What is the angle of reflection?
+
+Cluster 1 (8 questions)
+   Q1: What is reflection of light?
+   Q2: Define the reflection of light.
+   Q3: What do you understand by the reflection of light?
+   Q4: Explain the meaning of light reflection.
+   Q5: State the laws of reflection of light.
+   ... and 3 more
+
+Cluster 2 (1 questions)
+   Q7: The angle of incidence is 30°. What is the angle of reflection?
+

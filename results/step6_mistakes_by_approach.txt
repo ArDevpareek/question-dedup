@@ -1,0 +1,90 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+judge_cache_v1.json: cache version 09d27bfb7e4f, 56 verdicts
+judge_cache.json: cache version 51acce50ed6b, 61 verdicts
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2169.05it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:   3%|▎         | 3/105 [00:00<00:05, 19.99it/s]Loading weights:  21%|██        | 22/105 [00:00<00:00, 102.86it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 322.39it/s]
+
+=== 1. Scores per approach ===
+-- all 60 (60 pairs)
+embedding only, line 0.80          precision 0.73 | recall 0.84 | missed dups  5 | false alarms 10 | review  0 | judge calls  0
+judge only (old rules)             precision 0.97 | recall 0.88 | missed dups  4 | false alarms  1 | review  0 | judge calls 56
+judge only (new rules)             precision 0.94 | recall 1.00 | missed dups  0 | false alarms  2 | review  0 | judge calls 56
+old cascade (0.92, 0.75), old rule precision 0.93 | recall 0.78 | missed dups  7 | false alarms  2 | review  0 | judge calls 34
+old cascade (0.92, 0.75), new rule precision 0.91 | recall 0.91 | missed dups  3 | false alarms  3 | review  0 | judge calls 34
+step-1 best (0.92, 0.50), old rule precision 0.90 | recall 0.84 | missed dups  5 | false alarms  3 | review  0 | judge calls 44
+step-4 best (0.98, 0.50), new rule precision 0.97 | recall 0.97 | missed dups  1 | false alarms  1 | review  0 | judge calls 52
+cross-encoder alone, line 0.5      precision 0.89 | recall 0.53 | missed dups 15 | false alarms  2 | review  0 | judge calls  0
+D3 (0.8, 0.05), old rules          precision 0.96 | recall 0.69 | missed dups 10 | false alarms  1 | review  0 | judge calls 15
+D3 (0.8, 0.05), new rules          precision 1.00 | recall 0.72 | missed dups  9 | false alarms  0 | review  0 | judge calls 15
+-- TEST half (30 pairs)
+embedding only, line 0.80          precision 0.72 | recall 0.81 | missed dups  3 | false alarms  5 | review  0 | judge calls  0
+judge only (old rules)             precision 0.94 | recall 0.94 | missed dups  1 | false alarms  1 | review  0 | judge calls 28
+judge only (new rules)             precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 28
+old cascade (0.92, 0.75), old rule precision 0.93 | recall 0.81 | missed dups  3 | false alarms  1 | review  0 | judge calls 17
+old cascade (0.92, 0.75), new rule precision 0.93 | recall 0.88 | missed dups  2 | false alarms  1 | review  0 | judge calls 17
+step-1 best (0.92, 0.50), old rule precision 0.88 | recall 0.88 | missed dups  2 | false alarms  2 | review  0 | judge calls 22
+step-4 best (0.98, 0.50), new rule precision 1.00 | recall 0.94 | missed dups  1 | false alarms  0 | review  0 | judge calls 26
+cross-encoder alone, line 0.5      precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  0
+D3 (0.8, 0.05), old rules          precision 0.93 | recall 0.81 | missed dups  3 | false alarms  1 | review  0 | judge calls  8
+D3 (0.8, 0.05), new rules          precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  8
+
+=== 2. Mistakes per approach on all 60 pairs, grouped by category ===
+
+embedding only, line 0.80: 15 mistakes
+   paraphrase                     P7
+   numbers_changed                N2, N5, N6
+   same_topic_different_concept   D1, D4, D5
+   near_miss_wording              W2, W3, W5, W6, W7, W8
+   different_topic                T2
+   other_subject_paraphrase       C4
+
+judge only (old rules): 5 mistakes
+   numbers_changed                N1
+   extra_part                     X1, X3, X4
+   near_miss_wording              W4
+
+judge only (new rules): 2 mistakes
+   same_topic_different_concept   D1, D7
+
+old cascade (0.92, 0.75), old rules: 9 mistakes
+   paraphrase                     P7
+   numbers_changed                N1, N6
+   extra_part                     X1, X3, X4
+   near_miss_wording              W5, W6
+   other_subject_paraphrase       C4
+
+old cascade (0.92, 0.75), new rules: 6 mistakes
+   paraphrase                     P7
+   numbers_changed                N6
+   same_topic_different_concept   D1
+   near_miss_wording              W5, W6
+   other_subject_paraphrase       C4
+
+step-1 best (0.92, 0.50), old rules: 8 mistakes
+   numbers_changed                N1
+   extra_part                     X1, X3, X4
+   near_miss_wording              W4, W5, W6
+   other_subject_paraphrase       C4
+
+step-4 best (0.98, 0.50), new rules: 2 mistakes
+   same_topic_different_concept   D1
+   other_subject_paraphrase       C4
+
+cross-encoder alone, line 0.5: 17 mistakes
+   paraphrase                     P1, P5, P7, P8
+   numbers_changed                N1, N2, N3, N4, N5, N6
+   extra_part                     X3, X6
+   near_miss_wording              W3, W7
+   other_subject_paraphrase       C1, C3, C4
+
+D3 (0.8, 0.05), old rules: 11 mistakes
+   paraphrase                     P7
+   numbers_changed                N1, N2, N3, N4, N5
+   extra_part                     X3
+   near_miss_wording              W4
+   other_subject_paraphrase       C1, C3, C4
+
+D3 (0.8, 0.05), new rules: 9 mistakes
+   paraphrase                     P7
+   numbers_changed                N1, N2, N3, N4, N5
+   other_subject_paraphrase       C1, C3, C4

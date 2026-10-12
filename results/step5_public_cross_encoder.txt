@@ -1,0 +1,100 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:  32%|███▏      | 34/105 [00:00<00:00, 336.90it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 727.12it/s]
+=== Cross-encoder scores by category ===
+qqp                            (different) scores 0.00 to 1.00
+paws                           (duplicate) scores 0.04 to 0.99
+
+=== Cross-encoder alone, different lines ===
+line 0.3: precision 0.59 | recall 0.90 | missed  4 | false alarms 26
+line 0.5: precision 0.60 | recall 0.90 | missed  4 | false alarms 25
+line 0.7: precision 0.59 | recall 0.88 | missed  5 | false alarms 25
+line 0.9: precision 0.59 | recall 0.80 | missed  8 | false alarms 23
+
+=== Mistakes at line 0.5 ===
+QQP13 qqp                            expected duplicate ce 0.13
+      A: Who are some of the most dangerous or worst politicians in India?
+      B: Who is the worst leader of India? And why?
+QQP27 qqp                            expected duplicate ce 0.03
+      A: What are some of the best jokes?
+      B: What is the best joke you have ever heard?
+QQP39 qqp                            expected different ce 1.00
+      A: How do I speak English fluently in five days?
+      B: How can I improve intonation and speak english fluently within few days?
+PAWS2 paws                           expected different ce 0.97
+      A: In 1346 , a border war between Wolfenbüttel and the Archbishop of Magdeburg broke out .
+      B: In 1346 , the border war broke out between Magdeburg and the Archbishop of Wolfenbüttel .
+PAWS4 paws                           expected different ce 0.96
+      A: The route is now Pennsylvania Route 287 from Tioga to US Route 15 northeast of Larrys Creek and Pennsylvania Route 328 from U.S. 15 to PA 549 .
+      B: The route is now Pennsylvania Route 287 from Larrys Creek to US Route 15 northeast of Tioga and Pennsylvania Route 328 from U.S. 15 to PA 549 .
+PAWS5 paws                           expected different ce 0.96
+      A: It is pressed on transparent yellow vinyl and was released by Cosmic Records in 1995 .
+      B: It is published on the transparent yellow vinyl and was pressed by Cosmic Records in 1995 .
+PAWS6 paws                           expected different ce 0.97
+      A: The first effective air pump built for scientific purposes in England was manufactured by Robert Hooke for Robert Boyle in 1658 .
+      B: The first effective air pump constructed in England for scientific purposes was made in 1658 by Robert Boyle for Robert Hooke .
+PAWS7 paws                           expected different ce 0.88
+      A: The Roman writer Suetonius recorded an anecdote of the heroic centurion Cassius Scaeva , who fought under Caesar in the Battle of Dyrrachium :
+      B: The heroic writer Suetonius approached an anecdote of the Roman centurios Cassius Scaeva , who fought in the Battle of Dyrrachium under Caesar .
+PAWS9 paws                           expected different ce 0.96
+      A: He was graduated from Mansfield College , and from the law department of Cumberland University , Lebanon , Tennessee , in 1872 .
+      B: He was graduated from Cumberland University in 1872 and from the Legal Department of Mansfield College , Lebanon , Tennessee .
+PAWS10 paws                           expected different ce 0.98
+      A: In 1928 , a children 's edition of poems from Biancos '' Songs of Innocence `` was published and selected and illustrated by William Blake .
+      B: In 1928 a children 's edition of poems from William Blake 's `` Songs of Innocence '' , selected and illustrated by Bianco , was published .
+PAWS11 paws                           expected different ce 0.98
+      A: Ignasiak is also a successful amateur golfer and now owns a Dairy Queen franchise in Saline , Michigan .
+      B: Ignasiak is now a successful amateur golfer and owns a Dairy Queen - Franchise in Saline , Michigan .
+PAWS14 paws                           expected different ce 0.97
+      A: Winnie Hill is a mountain in Oneonta , New York , in the central region of New York north of New York City .
+      B: Winnie Hill is a mountain located in the center of New York region New York north of Oneonta , New York .
+PAWS17 paws                           expected duplicate ce 0.21
+      A: Astrological references appear in the literature in the works of poets such as Dante Alighieri and Geoffrey Chaucer and by dramatists such as Christopher Marlowe and William Shakespeare .
+      B: Astrological references appear in literature in the works of poets such as Dante Alighieri and Geoffrey Chaucer , and of playwrights such as Christopher Marlowe and William Shakespeare .
+PAWS18 paws                           expected different ce 0.97
+      A: The pianist was Paulena Carter , and Ben Gage was singer and announcer .
+      B: The pianist was Ben Ben Gage , and Paulena Carter was a singer and announcer .
+PAWS19 paws                           expected different ce 0.97
+      A: In 1654 he studied with Eustache Le Sueur in Paris , and after Le Sueur 's death in 1655 , with Charles Le Brun .
+      B: In 1654 , he studied with Charles Le Brun in Paris , and after Le Sueur 's death in 1655 near Eustache Le Sueur .
+PAWS20 paws                           expected different ce 0.98
+      A: In March 2008 , Day opened for Rufus Wainwright in the Opera House Napa Valley .
+      B: In March 2008 , Rufus Wainwright opened for Day at the Napa Valley Opera House .
+PAWS22 paws                           expected different ce 0.98
+      A: He went to South Africa and returned to King Edward VII School .
+      B: He returned to South Africa and went to the King Edward VII School .
+PAWS24 paws                           expected different ce 0.97
+      A: When the memory is used , old videos are usually deleted automatically to save space .
+      B: When the memory is deleted , old videos are usually automatically used to save space .
+PAWS26 paws                           expected different ce 0.91
+      A: It was chosen as the 7th best film at the 19th Yokohama Film Festival .
+      B: It was selected at the 7th Yokohama Film Festival as the 19th best film .
+PAWS31 paws                           expected different ce 0.99
+      A: Raubenheimer is regarded as a car enthusiast and has remained in South Africa the `` father of the Mini Marcos .
+      B: Raubenheimer has remained a car enthusiast and is considered the `` father '' of the Mini Marcos in South Africa .
+PAWS32 paws                           expected different ce 0.99
+      A: Raven was angered of course , but consumed by his work .
+      B: Raven was of course consumed , but angered by his work .
+PAWS33 paws                           expected duplicate ce 0.10
+      A: Also in 2015 , she took first place at the Pan American Cross Country Cup in 2015 and second place at the NACAC Championships 2015 in track athletics in 5000 meters .
+      B: Also in 2015 , she took first at the 2015 Pan American Cross Country Cup and second at the 2015 NACAC Championships in Athletics in the 5000 meters .
+PAWS36 paws                           expected different ce 0.95
+      A: Unique elements are the lattice-like gable apron and the attached bay .
+      B: The lattice-like gable apron , and the beveled bay , are unique elements. ``
+PAWS39 paws                           expected different ce 0.89
+      A: Steve Cotterill left the club at the end of the season and was replaced by Craig Short .
+      B: Manager Craig Short left the club at the end of the season , and was replaced by Steve Cotterill .
+PAWS40 paws                           expected different ce 0.97
+      A: Gwendolyn has released four children 's albums as `` Gwendolyn and the Good Time Gang '' :
+      B: Good Time has released four children 's albums as '' Gwendolyn and the Gwendolyn `` .
+PAWS41 paws                           expected different ce 0.99
+      A: On September 8 , 2014 , Harris announced on his Twitter site that David Burtka and he were married on the weekend in Italy .
+      B: On September 8 , 2014 , David Burtka announced on his Twitter page that Harris and he were married over the weekend in Italy .
+PAWS42 paws                           expected different ce 0.91
+      A: As traditionally defined , several species from South America , one from Africa , several from Asia and two from Australia belong to the family .
+      B: As traditionally defined , the family includes several extant species from Australia , one from Africa , several from Asia , and two from South America .
+PAWS47 paws                           expected different ce 0.97
+      A: The Los Angeles County Department of Health Services operates the Monrovia Health Center in Rosemead , which serves Monrovia .
+      B: The Los Angeles County Department of Health Services operates the Monrovia Health Center in Monrovia , serving Rosemead .
+PAWS48 paws                           expected different ce 0.97
+      A: According to music journalist Paul Lester , Palmer rose from the northern clubs in England to become `` elegant and sophisticated and become a master of different styles .
+      B: According to music journalist Paul Lester , Palmer rose from several clubs in England to become `` Northern '' and the master of elegant and demanding styles .

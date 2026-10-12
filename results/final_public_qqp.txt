@@ -1,0 +1,128 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2919.56it/s]
+Judge: 49 pairs still need a verdict
+   1/49 QQP1: review
+   2/49 QQP2: different
+   3/49 QQP3: duplicate
+   4/49 QQP4: duplicate
+   5/49 QQP5: duplicate
+   6/49 QQP6: different
+   7/49 QQP7: different
+   8/49 QQP8: different
+   9/49 QQP9: duplicate
+   10/49 QQP10: duplicate
+   11/49 QQP11: duplicate
+   12/49 QQP12: different
+   13/49 QQP13: duplicate
+   14/49 QQP14: different
+   15/49 QQP15: different
+   16/49 QQP17: different
+   17/49 QQP18: duplicate
+   18/49 QQP19: different
+   19/49 QQP20: duplicate
+   20/49 QQP21: different
+   21/49 QQP22: different
+   22/49 QQP23: duplicate
+   23/49 QQP24: duplicate
+   24/49 QQP25: duplicate
+   25/49 QQP26: duplicate
+   26/49 QQP27: duplicate
+   27/49 QQP28: different
+   28/49 QQP29: duplicate
+   29/49 QQP30: different
+   30/49 QQP31: duplicate
+   31/49 QQP32: different
+   32/49 QQP33: different
+   33/49 QQP34: different
+   34/49 QQP35: different
+   35/49 QQP36: different
+   36/49 QQP37: different
+   37/49 QQP38: different
+   38/49 QQP39: duplicate
+   39/49 QQP40: different
+   40/49 QQP41: different
+   41/49 QQP42: different
+   42/49 QQP43: different
+   43/49 QQP44: different
+   44/49 QQP45: duplicate
+   45/49 QQP46: duplicate
+   46/49 QQP47: duplicate
+   47/49 QQP48: different
+   48/49 QQP49: duplicate
+   49/49 QQP50: different
+Numbers guard: ON
+
+=== 1. Embedding scores by category ===
+qqp                            (different) scores 0.01 to 0.99
+
+=== 2. Each layer on its own (all 60 pairs) ===
+embedding only, line at 0.60       precision 0.59 | recall 1.00 | missed dups  0 | false alarms 12 | review  0 | judge calls  0
+embedding only, line at 0.70       precision 0.62 | recall 0.94 | missed dups  1 | false alarms 10 | review  0 | judge calls  0
+embedding only, line at 0.80       precision 0.70 | recall 0.82 | missed dups  3 | false alarms  6 | review  0 | judge calls  0
+embedding only, line at 0.90       precision 0.83 | recall 0.29 | missed dups 12 | false alarms  1 | review  0 | judge calls  0
+judge only (no embedding lines)    precision 0.74 | recall 1.00 | missed dups  0 | false alarms  6 | review  2 | judge calls 49
+cascade now (0.92, 0.75)           precision 0.80 | recall 0.94 | missed dups  1 | false alarms  4 | review  1 | judge calls 20
+final (1.01, 0.5)                  precision 0.77 | recall 1.00 | missed dups  0 | false alarms  5 | review  1 | judge calls 32
+
+=== 3. Tuning on the TUNE half (30 pairs) ===
+cascade (0.92, 0.30)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 19
+cascade (0.92, 0.40)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 17
+cascade (0.92, 0.50)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 16
+cascade (0.92, 0.60)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 16
+cascade (0.92, 0.70)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  1 | judge calls 15
+cascade (0.92, 0.75)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  1 | judge calls 14
+cascade (0.95, 0.30)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 21
+cascade (0.95, 0.40)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 19
+cascade (0.95, 0.50)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (0.95, 0.60)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (0.95, 0.70)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  1 | judge calls 17
+cascade (0.95, 0.75)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  1 | judge calls 16
+cascade (0.98, 0.30)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 21
+cascade (0.98, 0.40)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 19
+cascade (0.98, 0.50)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (0.98, 0.60)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (0.98, 0.70)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  1 | judge calls 17
+cascade (0.98, 0.75)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  1 | judge calls 16
+cascade (1.01, 0.30)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 21
+cascade (1.01, 0.40)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 19
+cascade (1.01, 0.50)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (1.01, 0.60)               precision 0.71 | recall 1.00 | missed dups  0 | false alarms  4 | review  1 | judge calls 18
+cascade (1.01, 0.70)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  1 | judge calls 17
+cascade (1.01, 0.75)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  1 | judge calls 16
+
+Chosen: (0.92, 0.5) (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===
+cascade now (0.92, 0.75)           precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls  6
+cascade chosen (0.92, 0.5)         precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 13
+final (1.01, 0.5)                  precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 14
+
+=== 5. Mistakes with the chosen setting (0.92, 0.5) (all 60 pairs) ===
+QQP3 qqp                            expected different got duplicate score 0.81  judge: duplicate
+      A: What is the difference between aesthetic bodybuilding and normal bodybuilding?
+      B: What are the different workouts does Aesthetic bodybuilders do which Normal Bodybuilders don't?
+QQP10 qqp                            expected different got duplicate score 0.88  judge: duplicate
+      A: Is Economics good major?
+      B: Is economics a good major for an entrepreneur?
+QQP39 qqp                            expected different got duplicate score 0.74  judge: duplicate
+      A: How do I speak English fluently in five days?
+      B: How can I improve intonation and speak english fluently within few days?
+QQP45 qqp                            expected different got duplicate score 0.93  judge: duplicate
+      A: What is the best poem that you have ever written?
+      B: What is the best poem ever written?
+QQP47 qqp                            expected different got review    score 0.81  judge: duplicate
+      A: Is it safe to jailbreak an iPhone?
+      B: Should I jailbreak my iPhone 4?
+
+=== 6. Final setting (1.01, 0.5), numbers guard on vs off ===
+all pairs, guard ON                precision 0.77 | recall 1.00 | missed dups  0 | false alarms  5 | review  1 | judge calls 32
+all pairs, guard OFF               precision 0.77 | recall 1.00 | missed dups  0 | false alarms  5 | review  0 | judge calls 32
+TEST half, guard ON                precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 14
+TEST half, guard OFF               precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 14
+
+=== 7. Mistakes and reviews with the final setting (1.01, 0.5) (all pairs, guard ON) ===
+QQP3 qqp                            expected different got duplicate score 0.81  judge: duplicate  (MISTAKE)
+QQP10 qqp                            expected different got duplicate score 0.88  judge: duplicate  (MISTAKE)
+QQP39 qqp                            expected different got duplicate score 0.74  judge: duplicate  (MISTAKE)
+QQP45 qqp                            expected different got duplicate score 0.93  judge: duplicate  (MISTAKE)
+QQP47 qqp                            expected different got review    score 0.81  judge: duplicate  (MISTAKE)

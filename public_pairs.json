@@ -1,0 +1,702 @@
+[
+ {
+  "id": "QQP1",
+  "category": "qqp",
+  "label": "different",
+  "a": "From where to download episode2 season 3 of The Flash?",
+  "b": "deleted"
+ },
+ {
+  "id": "QQP2",
+  "category": "qqp",
+  "label": "different",
+  "a": "\"Why tabacco not have \"\"s\"\" or \"\"es\"\" postfix in this sentence?\"",
+  "b": "What does this sentence mean in Spanish? La copa mundial de fantasía es un juego de fútbol de mentiras, donde puedes entrenar a jugadores que juegan en la copa del mundo."
+ },
+ {
+  "id": "QQP3",
+  "category": "qqp",
+  "label": "different",
+  "a": "What is the difference between aesthetic bodybuilding and normal bodybuilding?",
+  "b": "What are the different workouts does Aesthetic bodybuilders do which Normal Bodybuilders don't?"
+ },
+ {
+  "id": "QQP4",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What is the worst advice you have ever got?",
+  "b": "What was the worse piece of advice you have ever received from someone?"
+ },
+ {
+  "id": "QQP5",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What does the universe expand into?",
+  "b": "If the universe is expanding, what is it expanding into? And how will this effect us?"
+ },
+ {
+  "id": "QQP6",
+  "category": "qqp",
+  "label": "different",
+  "a": "How BIG are the biggest Ships in the world?",
+  "b": "How are ships made?"
+ },
+ {
+  "id": "QQP7",
+  "category": "qqp",
+  "label": "different",
+  "a": "What are some hair serums that are as good as Essential's?",
+  "b": "What are some good coconut macaroon recipes that use a fruit as a sweetener and contain no added sugar, flour, or dairy products?"
+ },
+ {
+  "id": "QQP8",
+  "category": "qqp",
+  "label": "different",
+  "a": "What can make someone feel better when they are sad?",
+  "b": "What are some things that make you sad?"
+ },
+ {
+  "id": "QQP9",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What songs can you listen to repeatedly without hardly ever becoming tired of them?",
+  "b": "What songs can you listen to over and over and not get tired of?"
+ },
+ {
+  "id": "QQP10",
+  "category": "qqp",
+  "label": "different",
+  "a": "Is Economics good major?",
+  "b": "Is economics a good major for an entrepreneur?"
+ },
+ {
+  "id": "QQP11",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What are the benefits of adding boiled chicken to your diet?",
+  "b": "How effective is the boiled chicken diet?"
+ },
+ {
+  "id": "QQP12",
+  "category": "qqp",
+  "label": "different",
+  "a": "Is hydrogen peroxide soluble in water?",
+  "b": "What is hydrogen peroxide?"
+ },
+ {
+  "id": "QQP13",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Who are some of the most dangerous or worst politicians in India?",
+  "b": "Who is the worst leader of India? And why?"
+ },
+ {
+  "id": "QQP14",
+  "category": "qqp",
+  "label": "different",
+  "a": "What's the best place to learn React.js? Any prerequisite?",
+  "b": "I'm British. I've lived my entire adult life in the US. I'm moving back to England. What can I do to prepare my finances?"
+ },
+ {
+  "id": "QQP15",
+  "category": "qqp",
+  "label": "different",
+  "a": "How can India win 20+ medals in Tokyo 2020 Olympic?",
+  "b": "Can India win 10 gold medals in 2020?"
+ },
+ {
+  "id": "QQP16",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Is it true that there is life after death?",
+  "b": "Is it true that there is 'life after death'?"
+ },
+ {
+  "id": "QQP17",
+  "category": "qqp",
+  "label": "different",
+  "a": "Where can I find Filipino communities in Mexico?",
+  "b": "What are some of the Iphone 6s tips and tricks?"
+ },
+ {
+  "id": "QQP18",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Which is the most liked picture in facebook?",
+  "b": "Is there a way to find the most liked picture on Facebook? If so, what is the most liked picture?"
+ },
+ {
+  "id": "QQP19",
+  "category": "qqp",
+  "label": "different",
+  "a": "Is there a deference between RUF and Porsche? Why is RUF in Forza 4 and not Porsche?",
+  "b": "How many Porsche 911s have been built?"
+ },
+ {
+  "id": "QQP20",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Who is the world’s richest person?",
+  "b": "Who is the richest man?"
+ },
+ {
+  "id": "QQP21",
+  "category": "qqp",
+  "label": "different",
+  "a": "Why does light have energy?",
+  "b": "How much energy does light have?"
+ },
+ {
+  "id": "QQP22",
+  "category": "qqp",
+  "label": "different",
+  "a": "How do I download test cases with design steps to excel from HP ALM?",
+  "b": "Excel VBA Macro : How do I make code which automatically download all the test results and Defects from HP QC ALM and show me into excel?"
+ },
+ {
+  "id": "QQP23",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What does it mean if one dreams about baby elephants?",
+  "b": "What is the significance behind dreaming about baby elephants?"
+ },
+ {
+  "id": "QQP24",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What was the significance of the battle of Somme, and how did this battle compare and contrast to the Battle of Eslands River?",
+  "b": "What is the significance of the Battle of the Somme?"
+ },
+ {
+  "id": "QQP25",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Why are vikings portrayed wearing horned helmets?",
+  "b": "Why did Vikings have horns on their helmets?"
+ },
+ {
+  "id": "QQP26",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What’s it like working at Goldman Sachs?",
+  "b": "What is it like working at Goldman Sachs?"
+ },
+ {
+  "id": "QQP27",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "What are some of the best jokes?",
+  "b": "What is the best joke you have ever heard?"
+ },
+ {
+  "id": "QQP28",
+  "category": "qqp",
+  "label": "different",
+  "a": "Why can't I maintain an erection during sex when I can do it during masturbation?",
+  "b": "How can guys last longer during sex?"
+ },
+ {
+  "id": "QQP29",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "How do I find investment properties?",
+  "b": "How do you find the perfect investment property?"
+ },
+ {
+  "id": "QQP30",
+  "category": "qqp",
+  "label": "different",
+  "a": "Can you catch a diesease from table shower?",
+  "b": "How can I stop my shower water from stinking?"
+ },
+ {
+  "id": "QQP31",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Why India still using its tattered reservation policies?",
+  "b": "Is caste reservation system still necessary in India?"
+ },
+ {
+  "id": "QQP32",
+  "category": "qqp",
+  "label": "different",
+  "a": "Why is it that you die when you cut some arteries (or vein) of your hand, but you don't die when your arm is cut?",
+  "b": "How long would it take to bleed out if you cut your hepatic artery?"
+ },
+ {
+  "id": "QQP33",
+  "category": "qqp",
+  "label": "different",
+  "a": "Did Narendra Modi insult the national flag by wearing it around his neck and using it to wipe his sweat?",
+  "b": "What can we do to help Narendra Modi achieve his dream?"
+ },
+ {
+  "id": "QQP34",
+  "category": "qqp",
+  "label": "different",
+  "a": "\"I've taken a drop for NEET 2017 & joined Aakash. Apart from NCERT and Aakash material, which \"\"good\"\" reference books should I buy for MCQ?\"",
+  "b": "Is aakash chemistry package sufficient for neet?"
+ },
+ {
+  "id": "QQP35",
+  "category": "qqp",
+  "label": "different",
+  "a": "How do you know your cabin when boarding a cruise ship?",
+  "b": "Is there any kpop shops in Dubai?"
+ },
+ {
+  "id": "QQP36",
+  "category": "qqp",
+  "label": "different",
+  "a": "Meaning for the name navaneethan in one word?",
+  "b": "Char p:3 ,c:3; Explain these declaration?"
+ },
+ {
+  "id": "QQP37",
+  "category": "qqp",
+  "label": "different",
+  "a": "What fraction of the web has been indexed by Google, Bing and Yahoo?",
+  "b": "What should I do if Google has started not indexing new articles of my web site?"
+ },
+ {
+  "id": "QQP38",
+  "category": "qqp",
+  "label": "different",
+  "a": "Which major should I choose if I am interested in psychology, analyzing behavior and philosophy?",
+  "b": "I am in 9th class and doesn't know which stream to choose. Which subject should I take if I am not interested in maths?"
+ },
+ {
+  "id": "QQP39",
+  "category": "qqp",
+  "label": "different",
+  "a": "How do I speak English fluently in five days?",
+  "b": "How can I improve intonation and speak english fluently within few days?"
+ },
+ {
+  "id": "QQP40",
+  "category": "qqp",
+  "label": "different",
+  "a": "How do I become rich with no money?",
+  "b": "How do rich people manage their money?"
+ },
+ {
+  "id": "QQP41",
+  "category": "qqp",
+  "label": "different",
+  "a": "Does Snapchat send screenshot notifications for stories?",
+  "b": "How can I screenshot snaps posted in stories?"
+ },
+ {
+  "id": "QQP42",
+  "category": "qqp",
+  "label": "different",
+  "a": "What can I do to make my younger sister realize that she is doing wrong with her life?",
+  "b": "What should people do when everything appears to be going wrong in their lives?"
+ },
+ {
+  "id": "QQP43",
+  "category": "qqp",
+  "label": "different",
+  "a": "Who is your favorite electronic producer?",
+  "b": "Who are your favorite music producer(s) of the last 10 years?"
+ },
+ {
+  "id": "QQP44",
+  "category": "qqp",
+  "label": "different",
+  "a": "What is the best order to read the Ender saga in?",
+  "b": "What year is Ender's Game (2013 movie) set in?"
+ },
+ {
+  "id": "QQP45",
+  "category": "qqp",
+  "label": "different",
+  "a": "What is the best poem that you have ever written?",
+  "b": "What is the best poem ever written?"
+ },
+ {
+  "id": "QQP46",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "Why does the Indian education system suck?",
+  "b": "What is the major problem with Indian education system?"
+ },
+ {
+  "id": "QQP47",
+  "category": "qqp",
+  "label": "different",
+  "a": "Is it safe to jailbreak an iPhone?",
+  "b": "Should I jailbreak my iPhone 4?"
+ },
+ {
+  "id": "QQP48",
+  "category": "qqp",
+  "label": "different",
+  "a": "How would you rotate a matrix?",
+  "b": "How do I shuffle two arrays into one array?"
+ },
+ {
+  "id": "QQP49",
+  "category": "qqp",
+  "label": "duplicate",
+  "a": "How do I report a bug/loophole on Quora? What will I get for that?",
+  "b": "How can I report a bug on Quora?"
+ },
+ {
+  "id": "QQP50",
+  "category": "qqp",
+  "label": "different",
+  "a": "Does vaginal fluid have any medical benefit for males?",
+  "b": "What causes male baldness?"
+ },
+ {
+  "id": "PAWS1",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Thameside is a railway franchise for the provision of passenger services on London , Tilbury and Southend Railway to the east of London and South - Essex .",
+  "b": "Thameside is a railway company for the provision of passenger services on London , Tilbury and Southend Railway in the south of Essex and East London ."
+ },
+ {
+  "id": "PAWS2",
+  "category": "paws",
+  "label": "different",
+  "a": "In 1346 , a border war between Wolfenbüttel and the Archbishop of Magdeburg broke out .",
+  "b": "In 1346 , the border war broke out between Magdeburg and the Archbishop of Wolfenbüttel ."
+ },
+ {
+  "id": "PAWS3",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "He was born in Bergen and died , was a brother of Nils Opdahl and represented Bergens TF .",
+  "b": "He was born and died in Bergen , was a brother of Nils Opdahl , and represented Bergens TF ."
+ },
+ {
+  "id": "PAWS4",
+  "category": "paws",
+  "label": "different",
+  "a": "The route is now Pennsylvania Route 287 from Tioga to US Route 15 northeast of Larrys Creek and Pennsylvania Route 328 from U.S. 15 to PA 549 .",
+  "b": "The route is now Pennsylvania Route 287 from Larrys Creek to US Route 15 northeast of Tioga and Pennsylvania Route 328 from U.S. 15 to PA 549 ."
+ },
+ {
+  "id": "PAWS5",
+  "category": "paws",
+  "label": "different",
+  "a": "It is pressed on transparent yellow vinyl and was released by Cosmic Records in 1995 .",
+  "b": "It is published on the transparent yellow vinyl and was pressed by Cosmic Records in 1995 ."
+ },
+ {
+  "id": "PAWS6",
+  "category": "paws",
+  "label": "different",
+  "a": "The first effective air pump built for scientific purposes in England was manufactured by Robert Hooke for Robert Boyle in 1658 .",
+  "b": "The first effective air pump constructed in England for scientific purposes was made in 1658 by Robert Boyle for Robert Hooke ."
+ },
+ {
+  "id": "PAWS7",
+  "category": "paws",
+  "label": "different",
+  "a": "The Roman writer Suetonius recorded an anecdote of the heroic centurion Cassius Scaeva , who fought under Caesar in the Battle of Dyrrachium :",
+  "b": "The heroic writer Suetonius approached an anecdote of the Roman centurios Cassius Scaeva , who fought in the Battle of Dyrrachium under Caesar ."
+ },
+ {
+  "id": "PAWS8",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The hybrids are , however , always male and appear infertile .",
+  "b": "However , the hybrids are always male and appear to be infertile ."
+ },
+ {
+  "id": "PAWS9",
+  "category": "paws",
+  "label": "different",
+  "a": "He was graduated from Mansfield College , and from the law department of Cumberland University , Lebanon , Tennessee , in 1872 .",
+  "b": "He was graduated from Cumberland University in 1872 and from the Legal Department of Mansfield College , Lebanon , Tennessee ."
+ },
+ {
+  "id": "PAWS10",
+  "category": "paws",
+  "label": "different",
+  "a": "In 1928 , a children 's edition of poems from Biancos '' Songs of Innocence `` was published and selected and illustrated by William Blake .",
+  "b": "In 1928 a children 's edition of poems from William Blake 's `` Songs of Innocence '' , selected and illustrated by Bianco , was published ."
+ },
+ {
+  "id": "PAWS11",
+  "category": "paws",
+  "label": "different",
+  "a": "Ignasiak is also a successful amateur golfer and now owns a Dairy Queen franchise in Saline , Michigan .",
+  "b": "Ignasiak is now a successful amateur golfer and owns a Dairy Queen - Franchise in Saline , Michigan ."
+ },
+ {
+  "id": "PAWS12",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "On March 10 , 1957 , Chris Barber 's Jazz Band played with Ottilie Patterson at the venue and on May 19 , 1961 , Acker Bilk joined .",
+  "b": "On 10 March 1957 , Chris Barber 's Jazz Band played at the venue , with Ottilie Patterson , and on 19 May 1961 , Acker Bilk performed ."
+ },
+ {
+  "id": "PAWS13",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "It featured Philip Nolan as Robert Ryan , Beau Bridges as Frederick Ingham , Peter Strauss as Arthur Danforth , and Cliff Robertson as Lt. Cmdr .",
+  "b": "He showed Philip Nolan as Robert Ryan , Beau Bridges as Frederick Ingham , Peter Strauss as Arthur Danforth and Cliff Robertson as Lt. Cmdr ."
+ },
+ {
+  "id": "PAWS14",
+  "category": "paws",
+  "label": "different",
+  "a": "Winnie Hill is a mountain in Oneonta , New York , in the central region of New York north of New York City .",
+  "b": "Winnie Hill is a mountain located in the center of New York region New York north of Oneonta , New York ."
+ },
+ {
+  "id": "PAWS15",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Nesby Phips appeared in the documentary `` Mystery Lights '' , presented by Nowhere Studios , produced by Converse and released in the UK December 4 , 2015 .",
+  "b": "Nesby Phips was released in the documentary `` Mystery Lights '' , presented by Nowhere Studios , produced by Converse and published in the UK on December 4 , 2015 ."
+ },
+ {
+  "id": "PAWS16",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "In December of 1944 , Byrd wrote to segregationist Mississippi Senator Theodore G. Bilbo :",
+  "b": "In December 1944 , Byrd wrote to segregationist Mississippi Senator Theodore G. Bilbo :"
+ },
+ {
+  "id": "PAWS17",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Astrological references appear in the literature in the works of poets such as Dante Alighieri and Geoffrey Chaucer and by dramatists such as Christopher Marlowe and William Shakespeare .",
+  "b": "Astrological references appear in literature in the works of poets such as Dante Alighieri and Geoffrey Chaucer , and of playwrights such as Christopher Marlowe and William Shakespeare ."
+ },
+ {
+  "id": "PAWS18",
+  "category": "paws",
+  "label": "different",
+  "a": "The pianist was Paulena Carter , and Ben Gage was singer and announcer .",
+  "b": "The pianist was Ben Ben Gage , and Paulena Carter was a singer and announcer ."
+ },
+ {
+  "id": "PAWS19",
+  "category": "paws",
+  "label": "different",
+  "a": "In 1654 he studied with Eustache Le Sueur in Paris , and after Le Sueur 's death in 1655 , with Charles Le Brun .",
+  "b": "In 1654 , he studied with Charles Le Brun in Paris , and after Le Sueur 's death in 1655 near Eustache Le Sueur ."
+ },
+ {
+  "id": "PAWS20",
+  "category": "paws",
+  "label": "different",
+  "a": "In March 2008 , Day opened for Rufus Wainwright in the Opera House Napa Valley .",
+  "b": "In March 2008 , Rufus Wainwright opened for Day at the Napa Valley Opera House ."
+ },
+ {
+  "id": "PAWS21",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The Marañón River ( formerly known as Sumatara ) is a large tributary of the Pastaza River in the northwestern Amazon - South American basin .",
+  "b": "The Marañón River ( formerly known as the Sumatara ) is a large tributary to the Pastaza River in the northwestern Amazon Basin of South America ."
+ },
+ {
+  "id": "PAWS22",
+  "category": "paws",
+  "label": "different",
+  "a": "He went to South Africa and returned to King Edward VII School .",
+  "b": "He returned to South Africa and went to the King Edward VII School ."
+ },
+ {
+  "id": "PAWS23",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The tiny island is from northwest to southeast meters wide and up to meters long and about in the surface .",
+  "b": "The tiny island is meters wide from northwest to southeast , and up to meters long , and about in area ."
+ },
+ {
+  "id": "PAWS24",
+  "category": "paws",
+  "label": "different",
+  "a": "When the memory is used , old videos are usually deleted automatically to save space .",
+  "b": "When the memory is deleted , old videos are usually automatically used to save space ."
+ },
+ {
+  "id": "PAWS25",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "In April 2016 it was announced that Reid will also present the new sister broadcast `` Top Gear '' Extra Gear `` along with Harris .",
+  "b": "In April 2016 , it was announced that Reid will also present `` Top Gear 's '' new sister show `` Extra Gear '' along with Harris ."
+ },
+ {
+  "id": "PAWS26",
+  "category": "paws",
+  "label": "different",
+  "a": "It was chosen as the 7th best film at the 19th Yokohama Film Festival .",
+  "b": "It was selected at the 7th Yokohama Film Festival as the 19th best film ."
+ },
+ {
+  "id": "PAWS27",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Their professional relationship has , however , survived this personal separation .",
+  "b": "However , their professional relationship survived this personal separation ."
+ },
+ {
+  "id": "PAWS28",
+  "category": "paws",
+  "label": "different",
+  "a": "He built weapon factories for Vtorov and Mikhelson in electrostal , Zatishye ( Moscow , Serpukhov ) and Bogorodsk ( Noginsk ) .",
+  "b": "He built weapons factories for Vtorov and Mikhelson in Moscow , Serpukhov , Zatishye , Bogorodsk ( Noginsk ) ."
+ },
+ {
+  "id": "PAWS29",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The forecasts are forecast both for the change from the previous calendar year to the current calendar year and from the current calendar year to the next calendar year .",
+  "b": "The forecasts are made both for the change from the previous calendar year to the current calendar year and from the current calendar year to the next calendar year ."
+ },
+ {
+  "id": "PAWS30",
+  "category": "paws",
+  "label": "different",
+  "a": "At this time , the BdV was particularly interested in the intelligence services in East Berlin and the partner agencies in Moscow .",
+  "b": "Intelligence services in Moscow and partner agencies in East Berlin were particularly interested in the BdV at this time ."
+ },
+ {
+  "id": "PAWS31",
+  "category": "paws",
+  "label": "different",
+  "a": "Raubenheimer is regarded as a car enthusiast and has remained in South Africa the `` father of the Mini Marcos .",
+  "b": "Raubenheimer has remained a car enthusiast and is considered the `` father '' of the Mini Marcos in South Africa ."
+ },
+ {
+  "id": "PAWS32",
+  "category": "paws",
+  "label": "different",
+  "a": "Raven was angered of course , but consumed by his work .",
+  "b": "Raven was of course consumed , but angered by his work ."
+ },
+ {
+  "id": "PAWS33",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Also in 2015 , she took first place at the Pan American Cross Country Cup in 2015 and second place at the NACAC Championships 2015 in track athletics in 5000 meters .",
+  "b": "Also in 2015 , she took first at the 2015 Pan American Cross Country Cup and second at the 2015 NACAC Championships in Athletics in the 5000 meters ."
+ },
+ {
+  "id": "PAWS34",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "In 2008 Republican John McCain defeated Democrat Barack Obama , 61 % -39 % .",
+  "b": "In 2008 , the Republican John McCain defeated Democrat Barack Obama , 61 % -39 % ."
+ },
+ {
+  "id": "PAWS35",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "According to the research , active and complex programs that strengthen behavioral skills are effective .",
+  "b": "According to the research , active and complex programs that strengthen behavioral capabilities are effective ."
+ },
+ {
+  "id": "PAWS36",
+  "category": "paws",
+  "label": "different",
+  "a": "Unique elements are the lattice-like gable apron and the attached bay .",
+  "b": "The lattice-like gable apron , and the beveled bay , are unique elements. ``"
+ },
+ {
+  "id": "PAWS37",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Knavesmire Primary School is located on Knavesmire Road , at the southern end of Campleshon Road .",
+  "b": "The Knavesmire Primary School is located on the Knavesmire Road , at the southern end of Campleshon Road ."
+ },
+ {
+  "id": "PAWS38",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "On 2 March 1642 , Legge married Elizabeth Washington ( c.1616 -- 1688 ) , `` sister of another future royalist officer , Colonel Henry Washington '' .",
+  "b": "On March 2 , 1642 , Legge married Elizabeth Washington ( c.1616 -- 1688 ) , `` sister of another future royalist officer , Colonel Henry Washington '' ."
+ },
+ {
+  "id": "PAWS39",
+  "category": "paws",
+  "label": "different",
+  "a": "Steve Cotterill left the club at the end of the season and was replaced by Craig Short .",
+  "b": "Manager Craig Short left the club at the end of the season , and was replaced by Steve Cotterill ."
+ },
+ {
+  "id": "PAWS40",
+  "category": "paws",
+  "label": "different",
+  "a": "Gwendolyn has released four children 's albums as `` Gwendolyn and the Good Time Gang '' :",
+  "b": "Good Time has released four children 's albums as '' Gwendolyn and the Gwendolyn `` ."
+ },
+ {
+  "id": "PAWS41",
+  "category": "paws",
+  "label": "different",
+  "a": "On September 8 , 2014 , Harris announced on his Twitter site that David Burtka and he were married on the weekend in Italy .",
+  "b": "On September 8 , 2014 , David Burtka announced on his Twitter page that Harris and he were married over the weekend in Italy ."
+ },
+ {
+  "id": "PAWS42",
+  "category": "paws",
+  "label": "different",
+  "a": "As traditionally defined , several species from South America , one from Africa , several from Asia and two from Australia belong to the family .",
+  "b": "As traditionally defined , the family includes several extant species from Australia , one from Africa , several from Asia , and two from South America ."
+ },
+ {
+  "id": "PAWS43",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Belhanhumei is a city in the central Somalia region of Hiran .",
+  "b": "Belhanhumei is a town in the central Somalia region of Hiran ."
+ },
+ {
+  "id": "PAWS44",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The military ranks of Trinidad and Tobago are the military insignias used by the defence force of Trinidad and Tobago .",
+  "b": "The military ranks of Trinidad and Tobago are the military badges used by the defence force of Trinidad and Tobago ."
+ },
+ {
+  "id": "PAWS45",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Eljero George Rinaldo Elia ( ; born 13 February 1987 ) is a Dutch footballer who plays as a winger for Turkish team İstanbul Başakşehir .",
+  "b": "Eljero George Rinaldo Elia ( born February 13 , 1987 ) is a Dutch footballer who plays for Istanbul Başakşehir , the Turkish team ."
+ },
+ {
+  "id": "PAWS46",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "Brister and his wife , the former Mary Louise Blum , had three daughters , Margaret Brister Allen , Marleen Brister Gough , and Kathleen Brister Martin .",
+  "b": "Brister and his wife , former Mary Louise Blum , had three daughters , Margaret Brister Allen , Marleen Brister Gough and Kathleen Brister Martin ."
+ },
+ {
+  "id": "PAWS47",
+  "category": "paws",
+  "label": "different",
+  "a": "The Los Angeles County Department of Health Services operates the Monrovia Health Center in Rosemead , which serves Monrovia .",
+  "b": "The Los Angeles County Department of Health Services operates the Monrovia Health Center in Monrovia , serving Rosemead ."
+ },
+ {
+  "id": "PAWS48",
+  "category": "paws",
+  "label": "different",
+  "a": "According to music journalist Paul Lester , Palmer rose from the northern clubs in England to become `` elegant and sophisticated and become a master of different styles .",
+  "b": "According to music journalist Paul Lester , Palmer rose from several clubs in England to become `` Northern '' and the master of elegant and demanding styles ."
+ },
+ {
+  "id": "PAWS49",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "She produced together with her husband Kadaru Nagabhushanam under the banners of Sri Rajarajeswari films , Rajasri pictures and Sri Varalakshmi films about 25 -- 30 films .",
+  "b": "She has produced about 25 -- 30 films along with her husband Kadaru Nagabhushanam under the banners of Sri Rajarajeswari films , Rajasri pictures and Sri Varalakshmi films ."
+ },
+ {
+  "id": "PAWS50",
+  "category": "paws",
+  "label": "duplicate",
+  "a": "The cover photo for the single `` Forget to Remember '' seems to have been taken during the shooting of the video `` Happy ? `` .",
+  "b": "The cover photo for the `` Forget to Remember '' single appears to have been taken during the filming of the `` Happy ? '' video ."
+ }
+]

@@ -1,0 +1,4 @@
+version 0c86fbfe3100 | total verdicts 155 | test-pair verdicts present 56 | missing from v3 0 | changed 0
+QQP 49 PAWS 50
+QQP raw judge verdicts: {'duplicate': 21, 'different': 27, 'review': 1}
+PAWS raw judge verdicts: {'duplicate': 40, 'different': 10, 'review': 0}

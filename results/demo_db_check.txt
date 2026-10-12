@@ -1,0 +1,2 @@
+rows 10
+['id', 'text', 'normalized_text', 'text_hash', 'tags', 'embedding', 'cluster_id']

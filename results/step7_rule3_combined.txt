@@ -1,0 +1,94 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Judge verdicts from judge_cache.json (cache version 0c86fbfe3100, 56 verdicts)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3394.57it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights:   8%|▊         | 8/105 [00:00<00:01, 74.02it/s]Loading weights:  24%|██▍       | 25/105 [00:00<00:00, 120.95it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 472.63it/s]
+
+=== 1. D1 (exact, then judge) and D2 (exact, then cross-encoder line 0.5) ===
+-- all 60 (60 pairs)
+D1 exact + judge                   precision 0.97 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 56
+D2 exact + cross-encoder 0.5       precision 0.89 | recall 0.53 | missed dups 15 | false alarms  2 | review  0 | judge calls  0
+-- TUNE half (30 pairs)
+D1 exact + judge                   precision 0.94 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 28
+D2 exact + cross-encoder 0.5       precision 0.78 | recall 0.44 | missed dups  9 | false alarms  2 | review  0 | judge calls  0
+-- TEST half (30 pairs)
+D1 exact + judge                   precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 28
+D2 exact + cross-encoder 0.5       precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  0
+
+=== 2. D3 tuning on the TUNE half (30 pairs) ===
+D3 (HIGH 0.80, LOW 0.05)           precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  7
+D3 (HIGH 0.80, LOW 0.10)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  3
+D3 (HIGH 0.80, LOW 0.20)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  3
+D3 (HIGH 0.80, LOW 0.30)           precision 1.00 | recall 0.44 | missed dups  9 | false alarms  0 | review  0 | judge calls  2
+D3 (HIGH 0.90, LOW 0.05)           precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  7
+D3 (HIGH 0.90, LOW 0.10)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  3
+D3 (HIGH 0.90, LOW 0.20)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  3
+D3 (HIGH 0.90, LOW 0.30)           precision 1.00 | recall 0.44 | missed dups  9 | false alarms  0 | review  0 | judge calls  2
+D3 (HIGH 0.95, LOW 0.05)           precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  8
+D3 (HIGH 0.95, LOW 0.10)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  4
+D3 (HIGH 0.95, LOW 0.20)           precision 1.00 | recall 0.50 | missed dups  8 | false alarms  0 | review  0 | judge calls  4
+D3 (HIGH 0.95, LOW 0.30)           precision 1.00 | recall 0.44 | missed dups  9 | false alarms  0 | review  0 | judge calls  3
+
+Chosen D3: HIGH 0.8, LOW 0.05 (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 3. D3 settings on the TEST half and all 60 (for reference, not used for choosing) ===
+TEST D3 (HIGH 0.80, LOW 0.05)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  8
+TEST D3 (HIGH 0.80, LOW 0.10)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  6
+TEST D3 (HIGH 0.80, LOW 0.20)      precision 1.00 | recall 0.75 | missed dups  4 | false alarms  0 | review  0 | judge calls  5
+TEST D3 (HIGH 0.80, LOW 0.30)      precision 1.00 | recall 0.69 | missed dups  5 | false alarms  0 | review  0 | judge calls  3
+TEST D3 (HIGH 0.90, LOW 0.05)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls 10
+TEST D3 (HIGH 0.90, LOW 0.10)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  8
+TEST D3 (HIGH 0.90, LOW 0.20)      precision 1.00 | recall 0.75 | missed dups  4 | false alarms  0 | review  0 | judge calls  7
+TEST D3 (HIGH 0.90, LOW 0.30)      precision 1.00 | recall 0.69 | missed dups  5 | false alarms  0 | review  0 | judge calls  5
+TEST D3 (HIGH 0.95, LOW 0.05)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls 11
+TEST D3 (HIGH 0.95, LOW 0.10)      precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  9
+TEST D3 (HIGH 0.95, LOW 0.20)      precision 1.00 | recall 0.75 | missed dups  4 | false alarms  0 | review  0 | judge calls  8
+TEST D3 (HIGH 0.95, LOW 0.30)      precision 1.00 | recall 0.69 | missed dups  5 | false alarms  0 | review  0 | judge calls  6
+ALL  D3 (HIGH 0.80, LOW 0.05)      precision 1.00 | recall 0.72 | missed dups  9 | false alarms  0 | review  0 | judge calls 15
+ALL  D3 (HIGH 0.80, LOW 0.10)      precision 1.00 | recall 0.66 | missed dups 11 | false alarms  0 | review  0 | judge calls  9
+ALL  D3 (HIGH 0.80, LOW 0.20)      precision 1.00 | recall 0.62 | missed dups 12 | false alarms  0 | review  0 | judge calls  8
+ALL  D3 (HIGH 0.80, LOW 0.30)      precision 1.00 | recall 0.56 | missed dups 14 | false alarms  0 | review  0 | judge calls  5
+ALL  D3 (HIGH 0.90, LOW 0.05)      precision 1.00 | recall 0.72 | missed dups  9 | false alarms  0 | review  0 | judge calls 17
+ALL  D3 (HIGH 0.90, LOW 0.10)      precision 1.00 | recall 0.66 | missed dups 11 | false alarms  0 | review  0 | judge calls 11
+ALL  D3 (HIGH 0.90, LOW 0.20)      precision 1.00 | recall 0.62 | missed dups 12 | false alarms  0 | review  0 | judge calls 10
+ALL  D3 (HIGH 0.90, LOW 0.30)      precision 1.00 | recall 0.56 | missed dups 14 | false alarms  0 | review  0 | judge calls  7
+ALL  D3 (HIGH 0.95, LOW 0.05)      precision 1.00 | recall 0.72 | missed dups  9 | false alarms  0 | review  0 | judge calls 19
+ALL  D3 (HIGH 0.95, LOW 0.10)      precision 1.00 | recall 0.66 | missed dups 11 | false alarms  0 | review  0 | judge calls 13
+ALL  D3 (HIGH 0.95, LOW 0.20)      precision 1.00 | recall 0.62 | missed dups 12 | false alarms  0 | review  0 | judge calls 12
+ALL  D3 (HIGH 0.95, LOW 0.30)      precision 1.00 | recall 0.56 | missed dups 14 | false alarms  0 | review  0 | judge calls  9
+
+=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===
+D1 exact + judge                   precision 1.00 | recall 1.00 | missed dups  0 | false alarms  0 | review  0 | judge calls 28
+D2 exact + cross-encoder 0.5       precision 1.00 | recall 0.62 | missed dups  6 | false alarms  0 | review  0 | judge calls  0
+D3 chosen (0.8, 0.05)              precision 1.00 | recall 0.81 | missed dups  3 | false alarms  0 | review  0 | judge calls  8
+
+=== 5. Chosen D3 on all 60 pairs ===
+D3 chosen (0.8, 0.05)              precision 1.00 | recall 0.72 | missed dups  9 | false alarms  0 | review  0 | judge calls 15
+
+=== 6. Mistakes with the chosen D3 setting (0.8, 0.05) (all 60 pairs) ===
+P7   paraphrase                     expected duplicate got different cosine 0.62  ce 0.01  judge: duplicate
+      A: What is diffuse reflection?
+      B: Define irregular reflection.
+N1   numbers_changed                expected duplicate got different cosine 0.89  ce 0.01  judge: duplicate
+      A: Two plane mirrors are inclined at 60°. How many images of an object placed between them are formed?
+      B: How many images are formed when two plane mirrors are placed at an angle of 45° to each other?
+N2   numbers_changed                expected duplicate got different cosine 0.77  ce 0.00  judge: duplicate
+      A: The angle of incidence is 30°. What is the angle of reflection?
+      B: A ray makes an angle of incidence of 55°. Find the angle of reflection.
+N3   numbers_changed                expected duplicate got different cosine 0.82  ce 0.04  judge: duplicate
+      A: A concave mirror has a focal length of 15 cm. An object is placed 25 cm in front of it. Find the image distance.
+      B: An object is kept 30 cm in front of a concave mirror of focal length 20 cm. Where is the image formed?
+N4   numbers_changed                expected duplicate got different cosine 0.87  ce 0.01  judge: duplicate
+      A: Find the focal length of a convex mirror whose radius of curvature is 32 cm.
+      B: A convex mirror has a radius of curvature of 20 cm. Calculate its focal length.
+N5   numbers_changed                expected duplicate got different cosine 0.80  ce 0.05  judge: duplicate
+      A: A person stands 2 m in front of a plane mirror. How far is the person from their image?
+      B: An object is placed 5 m from a plane mirror. What is the distance between the object and its image?
+C1   other_subject_paraphrase       expected duplicate got different cosine 0.85  ce 0.00  judge: duplicate
+      A: What is photosynthesis?
+      B: Define the process of photosynthesis.
+C3   other_subject_paraphrase       expected duplicate got different cosine 0.80  ce 0.03  judge: duplicate
+      A: What is the chemical formula of water?
+      B: Write the molecular formula of water.
+C4   other_subject_paraphrase       expected duplicate got different cosine 0.39  ce 0.00  judge: duplicate
+      A: Who wrote the Indian national anthem?
+      B: Name the author of Jana Gana Mana.

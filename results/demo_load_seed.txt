@@ -1,0 +1,12 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3162.18it/s]
+Q1 | What is reflection of light? | {'subject': 'physics', 'chapter': 'light'}
+Q2 | Define the reflection of light. | {'subject': 'physics', 'chapter': 'light'}
+Q3 | What do you understand by the reflection of light? | {'subject': 'physics', 'chapter': 'light'}
+Q4 | Explain the meaning of light reflection. | {'subject': 'physics', 'chapter': 'light'}
+Q5 | State the laws of reflection of light. | {'subject': 'physics', 'chapter': 'light'}
+Q6 | What is the angle of reflection? | {'subject': 'physics', 'chapter': 'light'}
+Q7 | The angle of incidence is 30°. What is the angle of reflection? | {'subject': 'physics', 'chapter': 'light', 'type': 'numerical'}
+Q8 | What is reflection? | {'subject': 'physics'}
+Q9 | What is the difference between regular and diffuse reflection? | {'subject': 'physics', 'chapter': 'light'}
+Q10 | Define the reflection of light. | {'subject': 'physics', 'chapter': 'light'}

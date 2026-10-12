@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  Q1 | got: new                | expected: new                | best:   -  [] | by: empty store | OK
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3179.26it/s]
+  Q2 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.94 ['Q1'] | by: judge       | OK
+         reason: The new question asks for the same definition using different words.
+  Q3 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.90 ['Q1'] | by: judge       | OK
+         reason: It asks the same question about the reflection of light in different words.
+  Q4 | got: semantic_duplicate | expected: semantic_duplicate | best: 0.93 ['Q1'] | by: judge       | OK
+         reason: It asks the same definition in different words.
+  Q5 | got: new                | expected: new                | best: 0.80 [] | by: judge       | OK
+         reason: The new question asks for the laws of reflection, whereas the existing questions ask for the definition or meaning of reflection.
+  Q6 | got: new                | expected: new                | best: 0.71 [] | by: judge       | OK
+         reason: It asks about a specific measurable angle rather than the general definition or laws of reflection.
+  Q7 | got: review             | expected: new                | best: 0.85 ['Q6'] | by: numbers guard | WRONG
+         reason: Only one question has numbers. This is a calculation based on the angle of reflection, adding numbers to the existing concept.
+  Q8 | got: review             | expected: review             | best: 0.86 ['Q1'] | by: judge       | OK
+         reason: The term 'reflection' is too vague without context, as it could refer to light, sound, or a psychological concept.
+  Q9 | got: new                | expected: new                | best: 0.66 [] | by: judge       | OK
+         reason: The new question asks to compare two specific types of reflection rather than defining reflection generally.
+ Q10 | got: exact_duplicate    | expected: exact_duplicate    | best: 1.00 ['Q2'] | by: exact       | OK
+
+Correct: 9/10   Wrong: 1   LLM judge calls: 8

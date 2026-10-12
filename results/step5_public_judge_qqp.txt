@@ -1,0 +1,66 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2355.37it/s]
+Judge: 0 pairs still need a verdict
+
+=== 1. Embedding scores by category ===
+qqp                            (different) scores 0.01 to 0.99
+
+=== 2. Each layer on its own (all 60 pairs) ===
+embedding only, line at 0.60       precision 0.59 | recall 1.00 | missed dups  0 | false alarms 12 | review  0 | judge calls  0
+embedding only, line at 0.70       precision 0.62 | recall 0.94 | missed dups  1 | false alarms 10 | review  0 | judge calls  0
+embedding only, line at 0.80       precision 0.70 | recall 0.82 | missed dups  3 | false alarms  6 | review  0 | judge calls  0
+embedding only, line at 0.90       precision 0.83 | recall 0.29 | missed dups 12 | false alarms  1 | review  0 | judge calls  0
+judge only (no embedding lines)    precision 0.76 | recall 0.94 | missed dups  1 | false alarms  5 | review  1 | judge calls 49
+cascade now (0.92, 0.75)           precision 0.79 | recall 0.88 | missed dups  2 | false alarms  4 | review  0 | judge calls 20
+
+=== 3. Tuning on the TUNE half (30 pairs) ===
+cascade (0.92, 0.30)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  0 | judge calls 19
+cascade (0.92, 0.40)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  0 | judge calls 17
+cascade (0.92, 0.50)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  0 | judge calls 16
+cascade (0.92, 0.60)               precision 0.69 | recall 0.90 | missed dups  1 | false alarms  4 | review  0 | judge calls 16
+cascade (0.92, 0.70)               precision 0.67 | recall 0.80 | missed dups  2 | false alarms  4 | review  0 | judge calls 15
+cascade (0.92, 0.75)               precision 0.73 | recall 0.80 | missed dups  2 | false alarms  3 | review  0 | judge calls 14
+cascade (0.95, 0.30)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 21
+cascade (0.95, 0.40)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 19
+cascade (0.95, 0.50)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (0.95, 0.60)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (0.95, 0.70)               precision 0.73 | recall 0.80 | missed dups  2 | false alarms  3 | review  0 | judge calls 17
+cascade (0.95, 0.75)               precision 0.80 | recall 0.80 | missed dups  2 | false alarms  2 | review  0 | judge calls 16
+cascade (0.98, 0.30)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 21
+cascade (0.98, 0.40)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 19
+cascade (0.98, 0.50)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (0.98, 0.60)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (0.98, 0.70)               precision 0.73 | recall 0.80 | missed dups  2 | false alarms  3 | review  0 | judge calls 17
+cascade (0.98, 0.75)               precision 0.80 | recall 0.80 | missed dups  2 | false alarms  2 | review  0 | judge calls 16
+cascade (1.01, 0.30)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 21
+cascade (1.01, 0.40)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 19
+cascade (1.01, 0.50)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (1.01, 0.60)               precision 0.75 | recall 0.90 | missed dups  1 | false alarms  3 | review  0 | judge calls 18
+cascade (1.01, 0.70)               precision 0.73 | recall 0.80 | missed dups  2 | false alarms  3 | review  0 | judge calls 17
+cascade (1.01, 0.75)               precision 0.80 | recall 0.80 | missed dups  2 | false alarms  2 | review  0 | judge calls 16
+
+Chosen: (0.92, 0.5) (precision >= 0.90, then highest recall, then fewest judge calls)
+
+=== 4. Fair check on the TEST half (30 pairs, not used for tuning) ===
+cascade now (0.92, 0.75)           precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls  6
+cascade chosen (0.92, 0.5)         precision 0.88 | recall 1.00 | missed dups  0 | false alarms  1 | review  0 | judge calls 13
+
+=== 5. Mistakes with the chosen setting (0.92, 0.5) (all 60 pairs) ===
+QQP3 qqp                            expected different got duplicate score 0.81  judge: duplicate
+      A: What is the difference between aesthetic bodybuilding and normal bodybuilding?
+      B: What are the different workouts does Aesthetic bodybuilders do which Normal Bodybuilders don't?
+QQP10 qqp                            expected different got duplicate score 0.88  judge: duplicate
+      A: Is Economics good major?
+      B: Is economics a good major for an entrepreneur?
+QQP11 qqp                            expected duplicate got different score 0.80  judge: different
+      A: What are the benefits of adding boiled chicken to your diet?
+      B: How effective is the boiled chicken diet?
+QQP39 qqp                            expected different got duplicate score 0.74  judge: duplicate
+      A: How do I speak English fluently in five days?
+      B: How can I improve intonation and speak english fluently within few days?
+QQP45 qqp                            expected different got duplicate score 0.93  judge: different
+      A: What is the best poem that you have ever written?
+      B: What is the best poem ever written?
+QQP47 qqp                            expected different got duplicate score 0.81  judge: duplicate
+      A: Is it safe to jailbreak an iPhone?
+      B: Should I jailbreak my iPhone 4?

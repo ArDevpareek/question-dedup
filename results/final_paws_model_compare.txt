@@ -1,0 +1,29 @@
+PAWS pairs with a gemini-3.8-flash verdict: 18 (7 duplicate, 11 different)
+   gemini-3.8-flash, current rules: judge_cache_v4_flash38.json, cache version 789a578c174a
+   gemini-3.5-flash-lite, current rules: judge_cache_v3_with_public.json, cache version 0c86fbfe3100
+   gemini-3.5-flash-lite, rule version 2: judge_cache_v2.json, cache version 51acce50ed6b
+
+=== Same 18 pairs, judge only (review counts as caught, no numbers guard) ===
+gemini-3.8-flash, current rules          precision 0.67 | recall 0.86 | missed dups  1 | false alarms  3
+gemini-3.5-flash-lite, current rules     precision 0.44 | recall 1.00 | missed dups  0 | false alarms  9
+gemini-3.5-flash-lite, rule version 2    precision 0.50 | recall 0.86 | missed dups  1 | false alarms  6
+
+=== Per pair ===
+PAWS2   expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  duplicate
+PAWS3   expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS4   expected different | 3.8-flash / lite-current / lite-v2: different  different  different
+PAWS5   expected different | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS6   expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  different
+PAWS7   expected different | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS8   expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS9   expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  different
+PAWS10  expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  duplicate
+PAWS11  expected different | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS13  expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS14  expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  duplicate
+PAWS15  expected duplicate | 3.8-flash / lite-current / lite-v2: different  duplicate  different
+PAWS16  expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS21  expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS22  expected different | 3.8-flash / lite-current / lite-v2: different  duplicate  different
+PAWS23  expected duplicate | 3.8-flash / lite-current / lite-v2: duplicate  duplicate  duplicate
+PAWS24  expected different | 3.8-flash / lite-current / lite-v2: different  different  different

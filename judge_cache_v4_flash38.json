@@ -1,0 +1,23 @@
+{
+  "version": "789a578c174a",
+  "verdicts": {
+    "PAWS2": "different",
+    "PAWS3": "duplicate",
+    "PAWS4": "different",
+    "PAWS5": "duplicate",
+    "PAWS6": "different",
+    "PAWS7": "duplicate",
+    "PAWS8": "duplicate",
+    "PAWS9": "different",
+    "PAWS10": "different",
+    "PAWS11": "duplicate",
+    "PAWS13": "duplicate",
+    "PAWS14": "different",
+    "PAWS15": "different",
+    "PAWS16": "duplicate",
+    "PAWS21": "duplicate",
+    "PAWS22": "different",
+    "PAWS23": "duplicate",
+    "PAWS24": "different"
+  }
+}

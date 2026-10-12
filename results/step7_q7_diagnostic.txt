@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 4185.20it/s]
+Q7: The angle of incidence is 30°. What is the angle of reflection?
+Neighbours the detector sends to the judge (top 3):
+   Q6 0.85 What is the angle of reflection?
+   Q1 0.53 What is reflection of light?
+   Q5 0.53 State the laws of reflection of light.
+
+A) judge with only Q6: {'verdict': 'duplicate', 'duplicate_of': 'Q6', 'reason': 'The new question adds a given value but still asks for the same angle of reflection based on the same concept.'}
+
+B) judge with all 3 neighbours: {'verdict': 'duplicate', 'duplicate_of': 'Q6', 'reason': 'This is a calculation based on the angle of reflection, sharing the same core concept as Q6 with changed numbers.'}
+C1) label [A]  (as in evaluate_pairs.py): {'verdict': 'different', 'duplicate_of': None, 'reason': 'The new question introduces numbers and requires a specific calculation based on the law of reflection, unlike the general definition asked in the existing question.'}
+D1) label [Q6] (as in detector.py):      {'verdict': 'duplicate', 'duplicate_of': 'Q6', 'reason': 'The new question adds a numerical value for the angle of incidence, but essentially asks the same core physics question about the angle of reflection.'}
+C2) label [A]  (as in evaluate_pairs.py): {'verdict': 'duplicate', 'duplicate_of': 'A', 'reason': 'The new question adds a given value but still asks for the angle of reflection, making it a variation of the same core question.'}
+D2) label [Q6] (as in detector.py):      {'verdict': 'duplicate', 'duplicate_of': 'Q6', 'reason': 'The new question adds numbers and context while asking the exact same core question about the angle of reflection.'}

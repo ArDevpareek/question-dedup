@@ -1,0 +1,28 @@
+gemini-3.8-flash cache version 789a578c174a (current rules: new + calc rule), 18 verdicts
+gemini-3.5-flash-lite cache version 51acce50ed6b (rule version 2: new rules)
+
+PAWS pairs with a gemini-3.8-flash verdict: 18 of 50 (7 duplicate, 11 different)
+
+=== Same pairs, judge only (review counts as caught) ===
+gemini-3.8-flash, current rules          precision 0.67 | recall 0.86 | missed dups  1 | false alarms  3 | review  0
+gemini-3.5-flash-lite, rule version 2    precision 0.50 | recall 0.86 | missed dups  1 | false alarms  6 | review  0
+
+=== Per pair ===
+PAWS2   expected different 3.8-flash different flash-lite duplicate  differs
+PAWS3   expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS4   expected different 3.8-flash different flash-lite different
+PAWS5   expected different 3.8-flash duplicate flash-lite duplicate
+PAWS6   expected different 3.8-flash different flash-lite different
+PAWS7   expected different 3.8-flash duplicate flash-lite duplicate
+PAWS8   expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS9   expected different 3.8-flash different flash-lite different
+PAWS10  expected different 3.8-flash different flash-lite duplicate  differs
+PAWS11  expected different 3.8-flash duplicate flash-lite duplicate
+PAWS13  expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS14  expected different 3.8-flash different flash-lite duplicate  differs
+PAWS15  expected duplicate 3.8-flash different flash-lite different
+PAWS16  expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS21  expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS22  expected different 3.8-flash different flash-lite different
+PAWS23  expected duplicate 3.8-flash duplicate flash-lite duplicate
+PAWS24  expected different 3.8-flash different flash-lite different

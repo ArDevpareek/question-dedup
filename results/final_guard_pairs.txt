@@ -1,0 +1,13 @@
+Test pairs where only one question has numbers: 4 of 60
+D1   same_topic_different_concept   expected different | v2 new rules: duplicate  v3 new + calc rule: different
+      A: What is the angle of reflection?
+      B: The angle of incidence is 30°. What is the angle of reflection?
+D8   same_topic_different_concept   expected different | v2 new rules: different  v3 new + calc rule: different
+      A: What is the mirror formula?
+      B: Using the mirror formula, find the image distance for an object placed 20 cm from a concave mirror of focal length 10 cm.
+D9   same_topic_different_concept   expected different | v2 new rules: different  v3 new + calc rule: different
+      A: Define magnification produced by a spherical mirror.
+      B: A concave mirror produces a real image that is 3 times larger than the object. What is the magnification?
+D11  same_topic_different_concept   expected different | v2 new rules: different  v3 new + calc rule: different
+      A: How many images are formed by two plane mirrors at 60° to each other?
+      B: Why are infinitely many images formed when two plane mirrors are placed parallel to each other?
